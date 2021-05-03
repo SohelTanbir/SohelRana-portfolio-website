@@ -1,0 +1,52 @@
+.header{
+    width:100%;
+    font-size: 1.8rem;
+    padding:1rem 0;
+    background: #55178B;
+}
+.header .logo a{
+    text-transform: uppercase;
+    font-weight:600;
+    color:#ebebeb;
+}
+.header .logo a span{
+    color:crimson;
+}
+/*mobile menu */
+.mobile-menu{
+    color:#fff;
+    cursor: pointer;
+    font-size:2rem;
+    display: none;
+}
+.navbar ul li{
+    display: inline-block;
+}
+.navbar ul li a{
+    position: relative;
+    display:block;
+    margin-left:3rem;
+    padding:.5rem 0;
+    transition: all .5s ease;
+    color:#ebebeb;
+}
+.navbar ul li a::after{
+    content: "";
+    position: absolute;
+    background: crimson;
+    width:0;
+    height:.3rem;
+    display: block;
+    left:0;
+    bottom: 0;
+    transition: all .3s ease;
+}
+.navbar ul li a:hover{
+    color:crimson;
+}
+.navbar ul li a:hover::after{
+    width:100%;
+}
+#times {
+   display: none;
+}

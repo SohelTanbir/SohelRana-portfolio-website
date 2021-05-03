@@ -1,0 +1,31 @@
+/* responsive */
+@media only screen and (max-width:768px) {
+    /*responsive medium device*/
+    .mobile-menu{
+       display:block!important;
+    }
+    /*header*/
+    .header{
+      padding:2rem!important;
+    }
+    .navbar {
+        position: absolute;
+        top: 7rem;
+        background:#401367;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 0 5rem;
+        display: none;
+
+    }
+    .navbar ul li {
+        display: block!important;
+    }
+}
+@media only screen and (min-width:769px){
+    .navbar{
+        display: block!important;
+        width:100%!important;
+    }
+}
