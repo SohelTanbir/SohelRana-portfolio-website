@@ -1,0 +1,51 @@
+.about{
+    padding:8rem 0;
+    background-color: #fdfdfd;
+}
+.about-photo{
+    flex-basis:40%;
+}
+.about-photo img{
+    width:100%;
+}
+.about-info{
+    text-align: center;
+    flex-basis: 60%;
+    padding:0 2rem;
+}
+.about-info h2{
+    color: blueviolet;
+    font-size:3.5rem;
+}
+.comonStyle h4{
+    position: relative;
+    color:crimson;
+    margin-bottom:1rem;
+}
+.comonStyle h4::before {
+    content: "";
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    width: 5rem;
+    height: 0.2rem;
+    background-color: crimson;
+}
+.comonStyle h4::after {
+    content: "";
+    position: absolute;
+    right: 35%;
+    top: 50%;
+    width: 5rem;
+    height: 0.2rem;
+    background-color: crimson;
+}
+.about-info p{
+    padding-left:5rem;
+    text-align: justify;
+    margin-bottom:2rem;
+}
+.about-info button{
+    float: left!important;
+    margin-left:5rem;
+}

@@ -1,6 +1,6 @@
 .banner{
     width:100%;
-    height:100vh;
+    padding:1rem 0 6rem;
 }
 .banner-text{
     flex-basis:50%;
@@ -15,7 +15,7 @@
 .banner-text h1 span{
     color: crimson;
 }
-.banner-text button{
+.comonBtn{
     border:none;
     outline:none;
     background: #55178B;
@@ -29,7 +29,7 @@
     border: .3rem solid transparent;
     transition: all .3s ease-in-out;
 }
-.banner-text button:hover{
+.comonBtn:hover{
     color: #55178B;
     border: .3rem solid #55178B;
     background: transparent;
@@ -38,12 +38,11 @@
     font-size:1.8rem;
     margin-top:1rem;
 }
-banner-image{
-    position: absolute;
-    text-align: right;
+.banner-image{
+    width:50%;
 }
 .banner-image img{
-    height:53rem;
+    height:55rem;
 }
 .social-top{
     margin:3rem 0;

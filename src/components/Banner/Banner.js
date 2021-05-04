@@ -4,6 +4,7 @@ import bannerImage from '../../images/banner/banner-illustration.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faFacebookF, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import TypedText from '../TypedText/TypedText';
 
 const Banner = () => {
     return (
@@ -12,7 +13,7 @@ const Banner = () => {
                 <div className="row">
                     <div className="banner-text">
                         <h1> <span>Hi, I am</span> <br/>Sohel Rana </h1>
-                        <h2>I am a Front-end Developer</h2>
+                       <h2> <TypedText/></h2>
                         <p>My Name is SohelRana. I am a Front-end Web Developer. I have been working with web design and development more than three years. In these three years I have completed many Website Project.</p>
                         <div className="social-top">
                             <ul>
@@ -32,10 +33,10 @@ const Banner = () => {
                             </ul>
                         </div>
                         <a href="https://drive.google.com/uc?export=download&id=1fo_gSFZXzK1r9aFasAcRToMc4BAKfKMG">
-                        <button>Download CV <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon></button>
+                        <button  className="comonBtn">Download CV <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon></button>
                         </a>
         
-                        <button>Contact me</button>
+                        <button className="comonBtn">Contact me</button>
                     </div>
                     <div className="banner-image">
                         <img src={bannerImage} alt="img"/>
