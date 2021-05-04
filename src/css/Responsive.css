@@ -8,7 +8,7 @@
 /*responsive medium device*/
 @media only screen and (max-width:768px) {
     html{
-        font-size: 50%;
+        font-size: 55%;
       }
     /*header section*/
     .mobile-menu{
@@ -20,13 +20,14 @@
     }
     .navbar {
         position: absolute;
-        top: 7rem;
+        top:6.5rem;
         background:#401367;
         left: 0;
         width: 100%;
         text-align: center;
         padding: 1.5rem 0 5rem;
         display: none;
+        z-index: 999;
     }
     .navbar ul li {
         display: block!important;
@@ -45,11 +46,49 @@
     .social-top ul {
         justify-content: center;
     }
+
+    /*about section*/
+    .about-photo {
+        flex-basis: 100%!important;
+        text-align: center;
+    }
+    .about {
+        padding: 4rem 0!important;
+    }
+    .about-photo img {
+        width: 65%!important;
+        margin: auto;
+    }
+    .about-info {
+        flex-basis: 100%!important;
+    }
+    .about-info p {
+        padding-left:0!important;
+    }
+
+    /*skills section*/
+    .technical-skills {
+        flex-basis: 100%!important;
+    }
+    .comonSkill {
+        width: 100%!important;
+    }
+    .diploma-course, .SSC-course, .JSC-course {
+        margin-bottom: 2.5rem!important;
+    }
+    .education-skills .row {
+        justify-content: center!important;
+    }
 }
 @media only screen and (min-width:769px){
     .navbar{
         display: block!important;
         width:100%!important;
+    }
+}
+@media only screen and (max-width:480px){
+    .about-photo img {
+        width: 85%!important;
     }
 }
 /*for extra small device*/

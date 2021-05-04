@@ -1,5 +1,8 @@
 import React from 'react';
 import './Skills.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+
 const Skills = () => {
     return (
         <div className="skill">
@@ -26,7 +29,7 @@ const Skills = () => {
                    <div className="bootstrap comonSkill"></div>
                    
                </div>
-               <div className="educational-skills">
+               <div className="technical-skills">
                     <span>jQuery</span>
                    <div className="jquery comonSkill"></div>
                     <span>SASS</span>
@@ -50,6 +53,9 @@ const Skills = () => {
                             <p>Session : 2017-18</p>
                             <p>Duration : 4 years</p>
                             <p>CGPA : 3.81 (out of 4)</p>
+                            <div className="circle">
+                                <span><FontAwesomeIcon icon={faGraduationCap}/></span>
+                            </div>
                         </div>
                         <div className="SSC-course">
                             <h3>Secondary School Certificate (SSC)</h3>
@@ -58,15 +64,20 @@ const Skills = () => {
                             <p>Years : 2015 - 2016</p>
                             <p>Duration: 2 years</p>
                             <p>GPA : 5 (out of 5)</p>
-                           
+                            <div className="circle">
+                                <span><FontAwesomeIcon icon={faGraduationCap}/></span>
+                            </div>
                         </div>
                         <div className="JSC-course">
                         <h3>Junior School Certificate (JSC)</h3>
                             <h4>Dewly Araji Laskara High School</h4>
-                            <p>Trade : General Electrical Works</p>
+                            <p>division: Science</p>
                             <p>Years : 2012 - 2014</p>
                             <p>Duration: 3 years</p>
                             <p>GPA : 4.06 (out of 5)</p>
+                            <div className="circle">
+                                <span><FontAwesomeIcon icon={faGraduationCap}/></span>
+                            </div>
                         </div>
                     </div>
                 </div>

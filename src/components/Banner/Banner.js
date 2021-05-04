@@ -33,7 +33,7 @@ const Banner = () => {
                             </ul>
                         </div>
                         <a href="https://drive.google.com/uc?export=download&id=1fo_gSFZXzK1r9aFasAcRToMc4BAKfKMG">
-                        <button  className="comonBtn">Download CV <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon></button>
+                        <button  className="comonBtn">Download CV <FontAwesomeIcon icon={faDownload}/></button>
                         </a>
         
                         <button className="comonBtn">Contact me</button>

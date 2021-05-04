@@ -26,7 +26,7 @@
 .comonSkill{
     width:90%;
     height:2.4rem;
-    background-color:#ebebeb;
+    background-color:#c8c8c8;
     position: relative;
     color: #fff;
     border-radius:1rem;
@@ -103,18 +103,38 @@
     color: #c8c8c8;
 }
 .education-skills h2{
- 
     margin-bottom:3rem;
 }
-.diploma-course{
+.diploma-course,
+.SSC-course,
+.JSC-course{
     position: relative;
 }
-.diploma-course::before{
+.diploma-course::before,
+.SSC-course::before,
+.JSC-course::before{
     content:"";
-    position: relative;
-    left:0;
-    width:.5rem;
-    height:100%;
-    background:red;
-
+    position:absolute;
+    left:-6%;
+    top:5%;
+    width:.3rem;
+    height:14rem;
+    background:#c8c8c8;;
+    display: block;
+    overflow: hidden;
+}
+.circle{
+    position: absolute;
+    left:-10%;
+    top:0;
+    width:3rem;
+    height:3rem;
+    border-radius:50%;
+    line-height:3rem;
+    background:#c8c8c8;
+    display: block;
+    text-align: center;
+}
+.circle span{
+    color:#fff;;
 }
