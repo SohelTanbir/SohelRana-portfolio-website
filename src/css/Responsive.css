@@ -3,6 +3,10 @@
     html{
         font-size: 55%;
       }
+    /*projects section*/
+    .project {
+        flex-basis: 49%!important;
+    }
 }
 
 /*responsive medium device*/
@@ -78,6 +82,10 @@
     }
     .education-skills .row {
         justify-content: center!important;
+    }
+    /*projects section*/
+    .project {
+        flex-basis: 100%!important;
     }
 }
 @media only screen and (min-width:769px){

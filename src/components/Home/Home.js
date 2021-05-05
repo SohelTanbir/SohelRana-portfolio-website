@@ -3,7 +3,7 @@ import './Home.css';
 import About from '../About/About';
 import Banner from '../Banner/Banner';
 import Skills from '../Skills/Skills'
-
+import Projects from '../Projects/Projects'
 
 const Home = () => {
     return (
@@ -11,6 +11,7 @@ const Home = () => {
           <Banner/>
           <About/>
           <Skills/>
+          <Projects/>
         </div>
     );
 };
