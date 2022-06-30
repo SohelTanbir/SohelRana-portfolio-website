@@ -12,12 +12,12 @@
 .project{
     position: relative;
     flex-basis:32%;
-    margin-bottom:2.5rem;
+    margin:0 .5% 1.5rem;
     height:30rem;
     cursor:pointer;
-   transition:.3s;
-  border: .1rem solid #dfdfdf;
-  padding: .2rem;
+    transition:.3s;
+    border: .1rem solid #dfdfdf;
+    padding: .2rem;
 }
 .project-overlay{
     position: absolute;

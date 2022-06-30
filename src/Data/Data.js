@@ -13,6 +13,20 @@ const portfolio_demo = [
         live_demo:'https://melodic-bombolone-809e83.netlify.app/'
     },
     {
+        title:'E-Store ',
+        img:'../images/portfolio/estore.png',
+        description:"E-Store is an E-commerce Website.customer can buy their cloth from the website.To make it I used Only HTML and CSS",
+        code_link:'https://github.com/SohelTanbir/E-Store',
+        live_demo:'https://soheltanbir.github.io/E-Store/index.html'
+    },
+    {
+        title:'Developer Community',
+        img:'../images/portfolio/developer-cmmunity -large.png',
+        description:"Developer Community is a blog Single page Application. I used React js For Front end",
+        code_link:"https://github.com/SohelTanbir/developers-community",
+        live_demo:'https://competent-mccarthy-3eb620.netlify.app/'
+    },
+    {
         title:'Simple Text Editor',
         img:'../images/portfolio/text-editor.png',
         description:'This is a Simple WYSIWYG Text Editor. I used HTML, CSS and JavaScript for the project',
@@ -34,13 +48,6 @@ const portfolio_demo = [
         live_demo:'https://travel-agency-68e4d.web.app/'
     },
     {
-        title:'E-Store ',
-        img:'../images/portfolio/estore.png',
-        description:"E-Store is an E-commerce Website.customer can buy their cloth from the website.To make it I used Only HTML and CSS",
-        code_link:'https://github.com/SohelTanbir/E-Store',
-        live_demo:'https://soheltanbir.github.io/E-Store/index.html'
-    },
-    {
         title:'Finix Web Template ',
         img:'../images/portfolio/finix.png',
         description:"Finix is beautiful get appoint web Template .To make it I used only HTML and CSS",
@@ -53,6 +60,13 @@ const portfolio_demo = [
         description:"NewBiz is beautiful Business solution web Template .To make it I used only HTML and CSS",
         code_link:'https://github.com/SohelTanbir/NewBiz-webiste',
         live_demo:'https://soheltanbir.github.io/NewBiz-webiste/'
+    },
+    {
+        title:'Noxia Web Template',
+        img:'../images/portfolio/noxia.png',
+        description:"Noxia is Service provided website, .To make it I used only HTML and CSS",
+        code_link:'https://github.com/SohelTanbir/Noxia-website',
+        live_demo:'https://soheltanbir.github.io/Noxia-website/'
     },
     {
         title:'Noxia Web Template',

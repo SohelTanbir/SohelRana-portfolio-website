@@ -8,6 +8,13 @@ import portfolio_demo from '../../Data/Data';
 
 const Projects = () => {
 
+// handle show more
+const handleShowMore = ()=>{
+  alert('show more');
+}
+
+
+
     return (
         <div className="projects">
            <div className="container">
@@ -42,7 +49,7 @@ const Projects = () => {
                     } )
                   }
                 <div className="load-more-portfolio">
-                <button className="comonBtn">Show more</button>
+                <button onClick={handleShowMore} className="show_more_btn comonBtn">Show more</button>
                 </div>
                </div>
            </div>
