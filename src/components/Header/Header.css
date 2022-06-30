@@ -50,3 +50,6 @@
 #times {
    display: none;
 }
+.header .row{
+    justify-content: space-between;
+}
