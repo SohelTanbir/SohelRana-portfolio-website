@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, } from '@fortawesome/free-brands-svg-icons';
@@ -7,14 +7,15 @@ import portfolio_demo from '../../Data/Data';
 
 
 const Projects = () => {
+  const [projects, setProjects ] = useState(portfolio_demo);
+  const [showAll, setShowAll] = useState(9);
+
+ 
 
 // handle show more
 const handleShowMore = ()=>{
-  alert('show more');
+  setShowAll(portfolio_demo.length);
 }
-
-
-
     return (
         <div className="projects">
            <div className="container">
@@ -24,33 +25,38 @@ const handleShowMore = ()=>{
                </div>
                <div className="row">
                   {
-                    portfolio_demo.map((portfolio, index)=>{
-                      return(
-                        <>
-                        <div className="project" key={index}>
-                      <img src={portfolio.img} alt="no images"/>
-                      <div className="project-overlay">
-                          <div className="project-info">
-                            <h3>{portfolio.title}</h3>
-                            <p>{portfolio.description}</p>
-                            <div className="live-demo">
-                                <a href={portfolio.code_link} target="_blank" rel='noreferrer'>
-                                <button>Code link <FontAwesomeIcon icon={faGithub}/></button>
-                                </a>
-                                <a href={portfolio.live_demo} target="_blank" rel='noreferrer'>
-                                <button>Live demo <FontAwesomeIcon icon={faExternalLinkAlt}/></button>
-                                </a>
+                    projects?.map( portfolio=>{
+                      if(portfolio.id <= showAll){
+                        return(
+                          <>
+                          <div className="project" key={portfolio.id}>
+                        <img src={portfolio.img} alt="no images"/>
+                        <div className="project-overlay">
+                            <div className="project-info">
+                              <h3>{portfolio.title}</h3>
+                              <p>{portfolio.description}</p>
+                              <div className="live-demo">
+                                  <a href={portfolio.code_link} target="_blank" rel='noreferrer'>
+                                  <button>Code link <FontAwesomeIcon icon={faGithub}/></button>
+                                  </a>
+                                  <a href={portfolio.live_demo} target="_blank" rel='noreferrer'>
+                                  <button>Live demo <FontAwesomeIcon icon={faExternalLinkAlt}/></button>
+                                  </a>
+                              </div>
                             </div>
-                          </div>
-                      </div>
-                  </div>
-                        </>
-                      ) 
+                        </div>
+                    </div>
+                          </>
+                        ) 
+                      }
+                      return null
                     } )
                   }
-                <div className="load-more-portfolio">
-                <button onClick={handleShowMore} className="show_more_btn comonBtn">Show more</button>
-                </div>
+                {
+                  showAll<=9&& <div className="load-more-portfolio">
+                  <button onClick={handleShowMore} className="show_more_btn comonBtn">Show more</button>
+                  </div>
+                }
                </div>
            </div>
         </div>

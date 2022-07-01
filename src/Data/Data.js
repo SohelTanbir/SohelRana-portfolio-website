@@ -19,26 +19,30 @@ import gellary from '../images/portfolio/gellary.png'
 
 const portfolio_demo = [
     {
+        id:1,
         title:'Appri App Landing page',
         img:appri,
         description:'Appri is a app landing page.it is  a full responsive website Templete.To make it I used only HTML and CSS',
         code_link:'https://github.com/SohelTanbir/Appri-App-landing-page',
         live_demo:'https://soheltanbir.github.io/Appri-App-landing-page/'
     },
-    {    title:'Al Quran App',
+    {   id:2,
+        title:'Al Quran App',
         img:quranImg,
         description:'Al Quran web application for muslim people.This is a amazing application with three mode to use it.I use React js for Front and use Free API for Back end',
         code_link:'https://github.com/SohelTanbir/Vaid-tech/tree/Al-Quran',
         live_demo:'https://melodic-bombolone-809e83.netlify.app/'
     },
     {
+        id:3,
         title:'E-Store ',
         img:estoreImg,
         description:"E-Store is an E-commerce Website.customer can buy their cloth from the website.To make it I used Only HTML and CSS",
         code_link:'https://github.com/SohelTanbir/E-Store',
         live_demo:'https://soheltanbir.github.io/E-Store/index.html'
     },
-    {
+    {   
+        id:4,
         title:'Color Picker App',
         img:colorPicker,
         description:"This is a simple color picker app. user can pick up any from the application with hex or rgb color code.",
@@ -46,6 +50,7 @@ const portfolio_demo = [
         live_demo:'https://soheltanbir.github.io/Color-Picker-App/'
     },
     {
+        id:5,
         title:'Developer Community',
         img:developerImg,
         description:"Developer Community is a blog Single page Application. I used React js For Front end",
@@ -53,6 +58,7 @@ const portfolio_demo = [
         live_demo:'https://competent-mccarthy-3eb620.netlify.app/'
     },
     {
+        id:6,
         title:'Simple Text Editor',
         img:textEditor,
         description:'This is a Simple WYSIWYG Text Editor. I used HTML, CSS and JavaScript for the project',
@@ -60,6 +66,7 @@ const portfolio_demo = [
         live_demo:'https://soheltanbir.github.io/Vaid-tech/text-editor.html'
     },
     {
+        id:7,
         title:'Mobile Repire IT',
         img:mobileCare,
         description:'This is a Full stack single page web application with Dashboard.I used to make it React js, Node js, Express js, MongoDB and firebase.customer can repair their mobile phone by perches repair package from the application.',
@@ -67,6 +74,7 @@ const portfolio_demo = [
         live_demo:'https://mobile-care-3d874.web.app/"'
     },
     {
+        id:8,
         title:'Travel Agency',
         img:travelImg,
         description:"Travel agency is onlne Ticket Booking application.pasanger can buy ticket from the application and can see destination by google map.it's made by React js, firebase Authentication",
@@ -74,6 +82,7 @@ const portfolio_demo = [
         live_demo:'https://travel-agency-68e4d.web.app/'
     },
     {
+        id:9,
         title:'Finix Web Template ',
         img:finix,
         description:"Finix is beautiful get appoint web Template .To make it I used only HTML and CSS",
@@ -81,6 +90,7 @@ const portfolio_demo = [
         live_demo:'https://soheltanbir.github.io/Finix/index.html'
     },
     {
+        id:10,
         title:'NewBiz Template ',
         img:newBiz,
         description:"NewBiz is beautiful Business solution web Template .To make it I used only HTML and CSS",
@@ -88,6 +98,7 @@ const portfolio_demo = [
         live_demo:'https://soheltanbir.github.io/NewBiz-webiste/'
     },
     {
+        id:11,
         title:'Noxia Web Template',
         img:noxia,
         description:"Noxia is Service provided website, .To make it I used only HTML and CSS",
@@ -95,6 +106,7 @@ const portfolio_demo = [
         live_demo:'https://soheltanbir.github.io/Noxia-website/'
     },
     {
+        id:12,
         title:'Freelancer Marketplace App',
         img:freelancer,
         description:"This is a Marketplace Web Application for Freelancer with few functionalities.",
@@ -102,6 +114,7 @@ const portfolio_demo = [
         live_demo:'https://soheltanbir.github.io/FreelanceBD-marketplace/'
     },
     {
+        id:13,
         title:'Image Slider',
         img:slider,
         description:"This is a simle image slider. I only use vanila javascript to make the project. no third party plugins.",
@@ -109,6 +122,7 @@ const portfolio_demo = [
         live_demo:'https://github.com/SohelTanbir/Vaid-tech/tree/slider-js'
     },
     {
+        id:14,
         title:'Image Gellary ',
         img:gellary,
         description:"This is a simle image Gellary. I only use vanila javascript to make the project",
