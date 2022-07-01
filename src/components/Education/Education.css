@@ -1,0 +1,47 @@
+
+.education-skills{
+    margin-top:3rem;
+    color: #c8c8c8;
+    background-color: #55178B;
+    padding: 2rem 0 4rem;
+}
+.education-skills .row{
+    justify-content: space-between;
+}
+.education-skills h2{
+    margin-bottom:3rem;
+    text-align: center;
+}
+.diploma-course,
+.SSC-course,
+.JSC-course{
+    position: relative;
+}
+.diploma-course::before,
+.SSC-course::before,
+.JSC-course::before{
+    content:"";
+    position:absolute;
+    left:-6%;
+    top:5%;
+    width:.3rem;
+    height:14rem;
+    background:#c8c8c8;;
+    display: block;
+    overflow: hidden;
+}
+.circle{
+    position: absolute;
+    left:-10%;
+    top:0;
+    width:3rem;
+    height:3rem;
+    border-radius:50%;
+    line-height:3rem;
+    background:#c8c8c8;
+    display: block;
+    text-align: center;
+}
+.circle span{
+    color:#fff;;
+}
