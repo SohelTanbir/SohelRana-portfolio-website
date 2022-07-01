@@ -28,7 +28,7 @@ const handleShowMore = ()=>{
                       return(
                         <>
                         <div className="project" key={index}>
-                      <img src={portfolio.img} alt="developer"/>
+                      <img src={portfolio.img} alt="no images"/>
                       <div className="project-overlay">
                           <div className="project-info">
                             <h3>{portfolio.title}</h3>
