@@ -13,7 +13,7 @@ const Projects = () => {
  
 
 // handle show more
-const handleShowMore = ()=>{
+const handleLoadMore = ()=>{
   setShowAll(portfolio_demo.length);
 }
     return (
@@ -54,7 +54,7 @@ const handleShowMore = ()=>{
                   }
                 {
                   showAll<=9&& <div className="load-more-portfolio">
-                  <button onClick={handleShowMore} className="show_more_btn comonBtn">Show more</button>
+                  <button onClick={handleLoadMore} className="show_more_btn comonBtn">Load more</button>
                   </div>
                 }
                </div>

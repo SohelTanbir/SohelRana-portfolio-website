@@ -1,0 +1,14 @@
+#footer{
+    width: 100%;
+    border-top: .1rem solid #eeeeee;
+    margin-top: 50px;
+}
+#footer p{
+    text-align: center;
+    padding: 15px;
+}
+#footer p span{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: blueviolet;
+}
