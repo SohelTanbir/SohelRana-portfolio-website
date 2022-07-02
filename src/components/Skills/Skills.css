@@ -25,11 +25,10 @@
 
 .comonSkill{
     width:90%;
-    height:2.4rem;
+    height:1.8rem;
     background-color:#c8c8c8;
     position: relative;
     color: #fff;
-    border-radius:1rem;
     overflow: hidden;
     margin: 0 0 2rem;
     padding:0;
@@ -47,6 +46,7 @@
     background: blueviolet;
     text-align: center;
     display: block;
+    font-size: 1.4rem;
 }
 .html-skill::after{
     content: "98%";
