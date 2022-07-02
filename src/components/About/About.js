@@ -13,7 +13,9 @@ const About = () => {
                     <div className="about-info comonStyle">
                        <h2>About me</h2>
                        <h4>Who am I ?</h4>
-                       <p>Hello,My Name is SohelRana. I am a MERN Stack Web Developer. I have been working with web design and development more than three years. In these three years I have completed many Website Project.like as MobileCare, Doctor portal, travel-agency online Ticket booking,Calculator app,Timer app and many more. My Experties on HTML , Css, Javascript, React js ,Bootstrap, Node js, Express Js,MongoDB etc.I always try to prove my skills by doing project.I am also curious to learn new things</p>
+                       <p>Hello,My Name is SohelRana. I am a Junior MERN Stack Developer.Specially I am expert on Front end Development.I have completed some Front end as well as  Back end Projects like as MobileCare, Doctor portal, travel-agency online Ticket booking,Calculator app,Timer app and many more. My Experties on HTML , Css, Javascript, React js ,Bootstrap, Node js, Express Js,MongoDB etc. I love to learn and work with new Technologies.
+                        Thanks.
+                       </p>
                        <button className="comonBtn">Learn more</button>
                     </div>
                 </div>
