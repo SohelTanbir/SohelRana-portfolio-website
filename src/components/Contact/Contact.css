@@ -1,0 +1,61 @@
+#contact-section{
+    width: 100%;
+    background: #fbfbfb;
+    padding: 5rem 0;
+}
+/*
+-------------------------------------------------------
+---------- Section:11 Contact us Section CSS ----------
+-------------------------------------------------------
+*/
+#contact_us{
+    width:100%;
+    padding: 100px 0;
+    background:#3C5499;
+}
+#contact_us h2::after{
+   background-color:#0c7fca;
+}
+.input_box{
+    width:55%;
+    margin: auto;
+}
+.input_box input,textarea{
+    font-family:Montserrat;
+    border: none;
+    outline: none;
+    background: #273A71;
+    display: inline-block;
+    padding: 15px 15px;
+    margin-bottom:25px;
+    border-radius:5px;
+    color: rgb(114, 189, 221);;
+    font-size: 16px;
+    font-weight:600;
+}
+.input_box input[type="text"]{
+    margin-right: 1%;
+}
+.input_box input[type="text"],[type="email"]{
+    width:49%;
+}
+.input_box input[placeholder="Subject"],textarea{
+    width:100%;
+}
+.input_box input[type="submit"] {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.input_box input[type="submit"]:hover{
+    background: #072f9e;
+}
+textarea{
+    height:150px;
+}
+::placeholder{
+    font-family:Montserrat;
+    font-size: 14px;
+    color: rgb(114, 189, 221);
+    font-weight:500;
+}

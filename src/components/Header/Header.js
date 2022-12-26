@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
 import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -9,7 +8,6 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 const Header = () => {
     const HideMenu = () => {
        document.getElementById("nav").style.display= 'block';
-       document.getElementById("nav").style.rotate='90deg'
        document.getElementById("bars").style.display= 'none'
        document.getElementById("times").style.display= 'block'
     }

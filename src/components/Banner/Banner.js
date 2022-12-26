@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faFacebookF, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import TypedText from '../TypedText/TypedText';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -18,6 +19,7 @@ const Banner = () => {
                         <div className="social-top">
                             <ul>
                                 <li>
+                                  
                                     <a href="https://www.linkedin.com/in/sohel-rana-b97445200/" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></a>
                                 </li>
                                 <li>
@@ -32,7 +34,7 @@ const Banner = () => {
                                
                             </ul>
                         </div>
-                        <a href="https://drive.google.com/uc?export=download&id=1fo_gSFZXzK1r9aFasAcRToMc4BAKfKMG">
+                        <a href="https://drive.google.com/file/d/1FO1wbDbHwJr3J7EHsRdHWBz9IBZNYHRV/view?usp=sharing"  target="_blank" rel="noopener noreferrer" download>
                         <button  className="comonBtn">Download CV <FontAwesomeIcon icon={faDownload}/></button>
                         </a>
         
