@@ -2,9 +2,9 @@ import './App.css';
 import './css/Responsive.css';
 import Home from './components/Home/Home';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+   BrowserRouter as Router,
+   Routes,
+   Route,
 } from 'react-router-dom';
 import Header from './components/Header/Header';
 import About from './components/About/About'
@@ -17,30 +17,15 @@ function App() {
   return (
     <Router>
       <Header/>
-     <Switch>
-       <Route exact path="/">
-       <Home/>
-       </Route>
-       <Route  path="/home">
-          <Home/>
-       </Route>
-       <Route  path="/about">
-          <About/>
-       </Route>
-       <Route  path="/skills">
-          <Skills/>
-       </Route>
-       <Route  path="/projects">
-          <Projects/>
-       </Route>
-       <Route  path="/blog">
-          <Blog/>
-       </Route>
-       <Route  path="/contact">
-          <Contact/>
-       </Route>
-      
-     </Switch>
+     <Routes>
+       <Route path="/" element={<Home/>} />
+       <Route path="/home" element={<Home/>} />
+       <Route path="/about" element={<About/>} />
+       <Route path="/skills" element={<Skills/>} />
+       <Route path="/projects" element={<Projects/>} />
+       <Route path="/blog" element={<Blog/>} />
+       <Route path="/contact" element={<Contact/>} />
+     </Routes>
     </Router>
   );
 }

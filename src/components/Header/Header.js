@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import ThemeToggle from '../ThemeToggle';
 
 
 const Header = () => {
@@ -23,7 +24,7 @@ const Header = () => {
                     <div className="logo">
                         <Link to="/">Sohel <span>Rana</span></Link>
                     </div>
-                    <div className="menu">
+                    <div className="menu" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                         <div className="navbar" id="nav">
                             <ul>
                                 <li>
@@ -46,6 +47,7 @@ const Header = () => {
                                 </li>
                             </ul>
                         </div>
+                        <ThemeToggle />
                     </div>
                     <div className="mobile-menu">
                         <span id="bars" onClick={HideMenu}><FontAwesomeIcon icon={faBars} /></span>

@@ -1,5 +1,7 @@
 import React from 'react';
-import Typed from 'react-typed';
+// react-typed v2 exports a named `ReactTyped` component (and a `Typed` re-export).
+// Import the ReactTyped component and use it as Typed for compatibility.
+import { ReactTyped as Typed } from 'react-typed';
 
 const TypedText = () => {
     return (
