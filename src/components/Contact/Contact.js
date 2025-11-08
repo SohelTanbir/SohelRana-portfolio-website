@@ -6,10 +6,9 @@ const Contact = () => {
   return (
     <div id="contact">
       <div className="container">
-        <div className="section_title text-center">
-          <div className="subtitle">CONTACT</div>
-          <h2>Have an Project in Mind?</h2>
-          <p className="lead">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
+        <div className="section-header">
+          <h2 className="section-title">Have a Project in Mind?</h2>
+          <p className="section-lead">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
         </div>
         <div className="contact_box">
           <div className="input_box">

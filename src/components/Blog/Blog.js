@@ -40,7 +40,6 @@ const Blog = () => {
         <section className="blog-section" id="blog">
             <div className="container">
                 <div className="section-header">
-                    <span className="kicker">BLOG</span>
                     <h2 className="section-title">Latest Blogs</h2>
                     <p className="section-lead">
                         There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.

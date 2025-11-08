@@ -36,9 +36,9 @@ const Projects = () => {
   return (
     <div className="projects" id="projects">
       <div className="container">
-        <div className="project-header comonStyle">
-          <h2>My Recent Works</h2>
-          <h4>What have I done ?</h4>
+        <div className="section-header">
+          <h2 className="section-title">My Recent Works</h2>
+          <p className="section-lead">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
         </div>
         <div className="filter-bar text-center">
           {categories.map(cat => (

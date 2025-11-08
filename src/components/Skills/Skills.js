@@ -22,9 +22,9 @@ const Skills = () => {
     return (
         <div className="skills-expertise-section" id="skills">
             <div className="skills-expertise-container">
-                <div className="skills-expertise-header">
-                    <h2>Skills & Expertise</h2>
-                    <p>Technologies I work with</p>
+                <div className="section-header">
+                    <h2 className="section-title">Technologies I Work With</h2>
+                    <p className="section-lead">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
                 </div>
 
                 <div className="skills-expertise-content">
