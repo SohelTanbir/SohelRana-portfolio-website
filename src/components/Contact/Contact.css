@@ -43,7 +43,8 @@
   background-color: #0c7fca;
 }
 .input_box {
-  width: 75%;
+  width: 100%;
+  max-width: 800px;
   margin: auto;
 }
 .input_box .row {
@@ -103,17 +104,18 @@
   font-size: 1.6rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  width: 100%;
-  max-width: 100%;
+  width: auto;
+  min-width: 200px;
+  float: right;
 }
 .input_box .primary-btn {
   background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
   color: #fff;
-  box-shadow: 0 8px 20px rgba(255, 71, 87, 0.3);
+  box-shadow: none;
 }
 .input_box .primary-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(255, 71, 87, 0.4);
+  box-shadow: none;
   background: linear-gradient(135deg, #ff3838 0%, #ff5252 100%);
 }
 

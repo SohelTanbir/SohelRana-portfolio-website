@@ -7,34 +7,34 @@ const Contact = () => {
     <div id="contact">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Have a Project in Mind?</h2>
-          <p className="section-lead">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
+          <h2 className="section-title">Get In Touch</h2>
+          <p className="section-lead">Have a project in mind? Let's discuss how we can work together to bring your ideas to life.</p>
         </div>
         <div className="contact_box">
           <div className="input_box">
             <form>
               <div className="row">
                 <div className="col-50">
-                  <input type="text" placeholder="Enter your name" />
+                  <input type="text" placeholder="Name" />
                 </div>
                 <div className="col-50">
-                  <input type="email" placeholder="Enter your email" />
+                  <input type="email" placeholder="Email" />
                 </div>
               </div>
 
               <div className="row">
                 <div className="col-100">
-                  <input type="text" placeholder="Phone number" />
+                  <input type="text" placeholder="Phone (Optional)" />
                 </div>
               </div>
 
               <div className="row">
                 <div className="col-100">
-                  <textarea placeholder="Tell me about your project"></textarea>
+                  <textarea placeholder="Message"></textarea>
                 </div>
               </div>
 
-              <div style={{ marginTop: '2.5rem' }}>
+              <div style={{ marginTop: '2.5rem', overflow: 'auto' }}>
                 <input type="submit" className="btn primary-btn" value="Send Message" />
               </div>
             </form>
