@@ -1,6 +1,7 @@
 /* Projects component styles (cleaned + overlay + two-column layout) */
 .projects {
-  padding: 5rem 0;
+  padding: 8rem 0;
+  background: #ffffff;
 }
 .project-header {
   text-align: center;
