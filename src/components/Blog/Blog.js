@@ -31,7 +31,7 @@ const posts = [
 
 const Blog = () => {
     return (
-        <section className="blog-section">
+        <section className="blog-section" id="blog">
             <div className="container">
                 <div className="section-header">
                     <span className="kicker">BLOG</span>

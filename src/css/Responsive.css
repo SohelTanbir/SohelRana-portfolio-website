@@ -20,22 +20,11 @@
   }
   /*header*/
   .header {
-    padding: 2rem !important;
+    padding: 1.5rem 0 !important;
   }
-  .navbar {
-    position: absolute;
-    top: 6.5rem;
-    background: #401367;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 1.5rem 0 5rem;
-    display: none;
-    z-index: 999;
-  }
-  .navbar ul li {
-    display: block !important;
-  }
+
+  /* Off-canvas menu - removed old navbar styles that conflict */
+
   /*Banner section*/
   .banner-text {
     flex: 0 0 100% !important;
@@ -95,10 +84,7 @@
   }
 }
 @media only screen and (min-width: 769px) {
-  .navbar {
-    display: block !important;
-    width: 100% !important;
-  }
+  /* Desktop navbar - handled in Header.css */
 }
 @media only screen and (max-width: 480px) {
   .about-photo img {

@@ -7,6 +7,8 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* offset for sticky header */
 }
 body {
   font-size: 1.6rem;

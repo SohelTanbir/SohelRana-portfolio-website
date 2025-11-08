@@ -1,7 +1,279 @@
 .banner {
   width: 100%;
-  padding: 1rem 0 6rem;
+  min-height: 85vh;
+  background: linear-gradient(135deg, #f8f3ff 0%, #e8f4f8 50%, #f0fff4 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
 }
+
+.banner-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.banner-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image-wrapper {
+  margin-bottom: 2rem;
+}
+
+.profile-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+  padding: 4px;
+  box-shadow: 0 8px 24px rgba(255, 71, 87, 0.2);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.profile-name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.profile-title {
+  font-size: 1.3rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icon.facebook {
+  background: #3b5998;
+}
+
+.social-icon.twitter {
+  background: #1da1f2;
+}
+
+.social-icon.instagram {
+  background: #e1306c;
+}
+
+.social-icon.linkedin {
+  background: #0077b5;
+}
+
+.social-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.download-cv-btn {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+.download-cv-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4);
+  background: linear-gradient(135deg, #ff3838 0%, #ff5252 100%);
+}
+
+/* Decorative Lines */
+.decorative-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.line {
+  position: absolute;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 71, 87, 0.1) 0%,
+    rgba(130, 202, 157, 0.1) 100%
+  );
+  transform-origin: center;
+}
+
+.line-1 {
+  width: 300px;
+  height: 2px;
+  top: 10%;
+  left: -50px;
+  transform: rotate(-45deg);
+}
+
+.line-2 {
+  width: 400px;
+  height: 2px;
+  top: 20%;
+  left: -100px;
+  transform: rotate(-45deg);
+}
+
+.line-3 {
+  width: 500px;
+  height: 2px;
+  top: 30%;
+  left: -150px;
+  transform: rotate(-45deg);
+}
+
+.line-4 {
+  width: 300px;
+  height: 2px;
+  bottom: 30%;
+  right: -50px;
+  transform: rotate(-45deg);
+  background: linear-gradient(
+    135deg,
+    rgba(130, 202, 157, 0.1) 0%,
+    rgba(255, 71, 87, 0.1) 100%
+  );
+}
+
+.line-5 {
+  width: 400px;
+  height: 2px;
+  bottom: 20%;
+  right: -100px;
+  transform: rotate(-45deg);
+  background: linear-gradient(
+    135deg,
+    rgba(130, 202, 157, 0.1) 0%,
+    rgba(255, 71, 87, 0.1) 100%
+  );
+}
+
+.line-6 {
+  width: 500px;
+  height: 2px;
+  bottom: 10%;
+  right: -150px;
+  transform: rotate(-45deg);
+  background: linear-gradient(
+    135deg,
+    rgba(130, 202, 157, 0.1) 0%,
+    rgba(255, 71, 87, 0.1) 100%
+  );
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner {
+    min-height: 70vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-name {
+    font-size: 2.5rem;
+  }
+
+  .profile-title {
+    font-size: 1.2rem;
+  }
+
+  .social-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.4rem;
+  }
+
+  .download-cv-btn {
+    font-size: 1.3rem;
+    padding: 0.9rem 2rem;
+  }
+
+  .line {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .profile-name {
+    font-size: 2.2rem;
+  }
+
+  .profile-title {
+    font-size: 1.1rem;
+  }
+
+  .social-links {
+    gap: 1rem;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+  }
+
+  .download-cv-btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+/* Legacy styles - keeping for backward compatibility */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -11,15 +283,13 @@
   display: flex;
   align-items: center;
   gap: 2rem;
-  /* For banner rows we prefer no wrapping so text and image stay on one line */
   flex-wrap: wrap;
 }
 .banner-text {
-  /* allow the text column to grow/shrink so it takes available space */
   flex: 1 1 50%;
   text-align: left;
   padding-right: 1.5rem;
-  min-width: 0; /* allow text to shrink instead of forcing wrap */
+  min-width: 0;
 }
 .banner-text h1 {
   color: blueviolet;
@@ -55,12 +325,11 @@
   margin-top: 1rem;
 }
 .banner-image {
-  /* allow image column to grow and align to the right */
   flex: 1 1 50%;
   display: flex;
   justify-content: flex-end;
   padding-left: 1.5rem;
-  min-width: 0; /* prevent image from forcing the row to wrap */
+  min-width: 0;
 }
 .banner-image img {
   max-width: 480px;

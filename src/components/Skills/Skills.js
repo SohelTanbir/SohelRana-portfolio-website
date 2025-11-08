@@ -20,7 +20,7 @@ const Skills = () => {
     ];
 
     return (
-        <div className="skills-expertise-section">
+        <div className="skills-expertise-section" id="skills">
             <div className="skills-expertise-container">
                 <div className="skills-expertise-header">
                     <h2>Skills & Expertise</h2>

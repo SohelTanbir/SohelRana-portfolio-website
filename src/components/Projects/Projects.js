@@ -34,7 +34,7 @@ const Projects = () => {
     }
   }
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <div className="container">
         <div className="project-header comonStyle">
           <h2>My Recent Works</h2>
