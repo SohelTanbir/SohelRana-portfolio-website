@@ -6,17 +6,39 @@ const Contact = () => {
     return (
         <div id="contact-section">
           <div className="container">
-            <div class="section_title text-center">
+            <div className="section_title text-center">
                 <h2>Contact Us</h2>
             </div>
-            <div class="contact_box text-center">
-                <div class="input_box">
+            <div className="contact_box">
+                <div className="input_box">
                   <form>
-                    <input type="text" placeholder="Your Name"/>
-                    <input type="email" placeholder="Your Email"/><br/>
-                    <input type="text" placeholder="Subject"/><br/>
-                    <textarea placeholder="Your Message"></textarea><br/>
-                    <input type="submit" class="btn" value="Send Message"/>
+                    <div className="row">
+                      <div className="col-50">
+                        <input type="text" placeholder="Enter your name"/>
+                      </div>
+                      <div className="col-50">
+                        <input type="text" placeholder="Company (Optional)"/>
+                      </div>
+                    </div>
+
+                    <div className="row">
+                      <div className="col-50">
+                        <input type="email" placeholder="Enter your email"/>
+                      </div>
+                      <div className="col-50">
+                        <input type="text" placeholder="Phone number"/>
+                      </div>
+                    </div>
+
+                    <div className="row">
+                      <div className="col-100">
+                        <textarea placeholder="Tell me about your project"></textarea>
+                      </div>
+                    </div>
+
+                    <div style={{textAlign: 'center', marginTop: '2.5rem'}}>
+                      <input type="submit" className="btn primary-btn" value="Send Message"/>
+                    </div>
                   </form>
                 </div>
             </div>
