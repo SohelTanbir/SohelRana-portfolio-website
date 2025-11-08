@@ -12,7 +12,7 @@ const Banner = () => {
         <div className="banner">
             <div className="container">
                 <div className="row">
-                    <div className="banner-text">
+                    <div className="banner-text col-50">
                         <h1> <span>Hi, I am</span> <br/>Sohel Rana </h1>
                        <h2> <TypedText/></h2>
                         <p>My Name is SohelRana. I am a Front-end Web Developer. I have been working with web design and development more than three years. In these three years I have completed many Website Project.</p>
@@ -40,7 +40,7 @@ const Banner = () => {
         
                         <button className="comonBtn">Contact me</button>
                     </div>
-                    <div className="banner-image">
+                    <div className="banner-image col-50">
                         <img src={bannerImage} alt="img"/>
                     </div>
                 </div>
