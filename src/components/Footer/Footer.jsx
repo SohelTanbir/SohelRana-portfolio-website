@@ -6,47 +6,61 @@ import {
   faTwitter,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  faPhone,
+  faEnvelope,
+  faMapMarkerAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
     <footer id="footer">
       <div className="footer-inner container">
         <div className="footer-row">
+          <div className="footer-col footer-about">
+            <h3>About Me</h3>
+            <p>
+              I am a passionate MERN Stack Developer specializing in building
+              modern web applications. I love creating elegant solutions and
+              bringing ideas to life through code.
+            </p>
+          </div>
+
+          <div className="footer-col footer-stack">
+            <h4>Tech Stack</h4>
+            <ul>
+              <li>MERN Stack</li>
+              <li>React / Next.js</li>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+
+          <div className="footer-col footer-blogs">
+            <h4>Latest Blogs</h4>
+            <ul>
+              <li>Why I Switched to Sketch For UI Design</li>
+              <li>Best Practices for Animated Progress Indicators</li>
+              <li>Designing the Perfect Feature Comparison Table</li>
+            </ul>
+          </div>
+
           <div className="footer-col footer-contact">
-            <h3>Let's Talk!</h3>
-            <h4>Contact Info</h4>
-            <p>closerpage@email.com</p>
-            <p>12 Hilton St, Manchester M1 1JF</p>
-            <p>+44 012 34 5678</p>
-          </div>
-
-          <div className="footer-col footer-links">
-            <h4>What I Do?</h4>
-            <ul>
-              <li>The Studio</li>
-              <li>Sponsoring</li>
-              <li>Newsletter</li>
-              <li>Contact Us</li>
-            </ul>
-          </div>
-
-          <div className="footer-col footer-links">
-            <h4>News</h4>
-            <ul>
-              <li>Hot Stuff</li>
-              <li>Perfect Place</li>
-              <li>Vintage</li>
-              <li>Products</li>
-            </ul>
-          </div>
-
-          <div className="footer-col footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-              <li>Style</li>
-              <li>Health</li>
-              <li>Relationship</li>
-              <li>Legal & Privacy</li>
+            <h4>Contact</h4>
+            <ul className="contact-list">
+              <li>
+                <FontAwesomeIcon icon={faPhone} />
+                <span>+44 012 34 5678</span>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faEnvelope} />
+                <span>closerpage@email.com</span>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
+                <span>12 Hilton St, Manchester M1 1JF</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -81,7 +95,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="copyright">
-            Next.js Site Template for Agency and Portfolio - © 2025
+            © 2025 All Rights Reserved by SOHEL RANA
           </div>
         </div>
       </div>
