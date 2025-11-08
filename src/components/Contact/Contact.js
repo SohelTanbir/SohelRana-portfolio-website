@@ -17,16 +17,17 @@ const Contact = () => {
                         <input type="text" placeholder="Enter your name"/>
                       </div>
                       <div className="col-50">
-                        <input type="text" placeholder="Company (Optional)"/>
+                        <input type="email" placeholder="Enter your email"/>
                       </div>
                     </div>
 
                     <div className="row">
                       <div className="col-50">
-                        <input type="email" placeholder="Enter your email"/>
+                        <input type="text" placeholder="Phone number"/>
                       </div>
                       <div className="col-50">
-                        <input type="text" placeholder="Phone number"/>
+                        {/* intentionally left blank to preserve column spacing on wide layouts */}
+                        <div style={{height: '0'}} />
                       </div>
                     </div>
 

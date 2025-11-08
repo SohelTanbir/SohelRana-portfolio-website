@@ -22,6 +22,8 @@
 }
 .input_box .row{
     margin-bottom: 1.6rem;
+    display: flex !important;
+    gap: 1.6rem;
 }
 .input_box input,
 .input_box textarea{
@@ -38,6 +40,9 @@
 }
 .input_box input::placeholder, .input_box textarea::placeholder{
     color: #9ca3af;
+}
+.input_box .col-50{
+    padding: 0 .8rem;
 }
 .input_box .col-50 input{
     width:100%;
