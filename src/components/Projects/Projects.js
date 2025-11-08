@@ -56,10 +56,6 @@ const Projects = () => {
                   <div className="project" key={portfolio.id}>
                     <div className="project-thumb">
                       <img src={portfolio.img} alt={portfolio.title} />
-                    </div>
-                    <div className="project-body">
-                      <h3 className="project-title">{portfolio.title}</h3>
-                      <p className="project-desc">{portfolio.description}</p>
                       <div className="live-demo">
                         <a href={portfolio.code_link} target="_blank" rel='noreferrer'>
                           <button>Code link <FontAwesomeIcon icon={faGithub} /></button>
@@ -69,21 +65,25 @@ const Projects = () => {
                         </a>
                       </div>
                     </div>
+                    <div className="project-body">
+                      <h3 className="project-title">{portfolio.title}</h3>
+                      <p className="project-desc">{portfolio.description}</p>
+                    </div>
                   </div>
                 )
               }
               return null
             })
           }
-
-          {
-            showAll <= 9 && projects.length > showAll && (
-              <div className="load-more-portfolio">
-                <button onClick={handleLoadMore} className="show_more_btn comonBtn">Load more</button>
-              </div>
-            )
-          }
         </div>
+
+        {
+          showAll <= 9 && projects.length > showAll && (
+            <div className="load-more-portfolio">
+              <button onClick={handleLoadMore} className="show_more_btn comonBtn">Load more</button>
+            </div>
+          )
+        }
       </div>
     </div>
   );
