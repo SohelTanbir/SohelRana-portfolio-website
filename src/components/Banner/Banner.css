@@ -1,107 +1,110 @@
-.banner{
-    width:100%;
-    padding:1rem 0 6rem;
+.banner {
+  width: 100%;
+  padding: 1rem 0 6rem;
 }
-.container{
-    max-width:1200px;
-    margin:0 auto;
-    padding:0 1rem;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
-.row{
-    display:flex;
-    align-items:center;
-    gap:2rem;
-    flex-wrap:wrap;
+.row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  /* For banner rows we prefer no wrapping so text and image stay on one line */
+  flex-wrap: wrap;
 }
-.banner-text{
-    /* allow the text column to grow/shrink so it takes available space */
-    flex: 1 1 50%;
-    text-align: left;
-    padding-right: 1.5rem;
+.banner-text {
+  /* allow the text column to grow/shrink so it takes available space */
+  flex: 1 1 50%;
+  text-align: left;
+  padding-right: 1.5rem;
+  min-width: 0; /* allow text to shrink instead of forcing wrap */
 }
-.banner-text h1{
-    color:blueviolet;
-    font-size: 4rem;
+.banner-text h1 {
+  color: blueviolet;
+  font-size: 4rem;
 }
-.banner-text h2{
-    margin-bottom:.5rem;
+.banner-text h2 {
+  margin-bottom: 0.5rem;
 }
-.banner-text h1 span{
-    color: crimson;
+.banner-text h1 span {
+  color: crimson;
 }
-.comonBtn{
-    border:none;
-    outline:none;
-    background: #55178B;
-    color:#fff;
-    padding:.5rem 2rem;
-    font-weight:500;
-    margin-right:1rem;
-    border-radius:.8rem;
-    cursor: pointer;
-    font-size:1.6rem;
-    border: .3rem solid transparent;
-    transition: all .3s ease-in-out;
+.comonBtn {
+  border: none;
+  outline: none;
+  background: #55178b;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  margin-right: 1rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  border: 0.3rem solid transparent;
+  transition: all 0.3s ease-in-out;
 }
-.comonBtn:hover{
-    color: #55178B;
-    border: .3rem solid #55178B;
-    background: transparent;
+.comonBtn:hover {
+  color: #55178b;
+  border: 0.3rem solid #55178b;
+  background: transparent;
 }
-.banner-text p{
-    font-size:1.8rem;
-    margin-top:1rem;
+.banner-text p {
+  font-size: 1.8rem;
+  margin-top: 1rem;
 }
-.banner-image{
-    /* allow image column to grow and align to the right */
-    flex: 1 1 50%;
-    display:flex;
-    justify-content:flex-end;
-    padding-left: 1.5rem;
+.banner-image {
+  /* allow image column to grow and align to the right */
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 1.5rem;
+  min-width: 0; /* prevent image from forcing the row to wrap */
 }
-.banner-image img{
-    max-width:480px;
-    width:100%;
-    height:auto;
-    display:block;
-    object-fit:cover;
+.banner-image img {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
-.social-top{
-    margin:3rem 0;
+.social-top {
+  margin: 3rem 0;
 }
-.social-top ul{
-    display: flex;
+.social-top ul {
+  display: flex;
 }
-.social-top ul li{
-    margin-left: 2.5rem;
+.social-top ul li {
+  margin-left: 2.5rem;
 }
-.social-top ul li a{
-    padding:.3rem 1rem;
-    display:block;
-    font-size:1.8rem;
-    color:#fff;
-    border-radius: .5rem;
-    transition:all .3s ease-in;
+.social-top ul li a {
+  padding: 0.3rem 1rem;
+  display: block;
+  font-size: 1.8rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in;
 }
-.social-top ul li a i{
-    border-radius: .5rem;
+.social-top ul li a i {
+  border-radius: 0.5rem;
 }
-.social-top ul li a:hover{
-    background: crimson;
+.social-top ul li a:hover {
+  background: crimson;
 }
-.social-top ul li:nth-child(1){
-    background-color: #0A66C2;
-    border-radius: .3rem;
+.social-top ul li:nth-child(1) {
+  background-color: #0a66c2;
+  border-radius: 0.3rem;
 }
-.social-top ul li:nth-child(2){
-    background-color: #24292E;
-    border-radius: .3rem;
+.social-top ul li:nth-child(2) {
+  background-color: #24292e;
+  border-radius: 0.3rem;
 }
-.social-top ul li:nth-child(3){
-    background-color: #1DA1F2;
-    border-radius: .3rem;
+.social-top ul li:nth-child(3) {
+  background-color: #1da1f2;
+  border-radius: 0.3rem;
 }
-.social-top ul li:nth-child(4){
-    background-color: #0B86EE;
-    border-radius: .3rem;
+.social-top ul li:nth-child(4) {
+  background-color: #0b86ee;
+  border-radius: 0.3rem;
 }

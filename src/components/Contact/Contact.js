@@ -23,11 +23,11 @@ const Contact = () => {
                 </div>
               </div>
 
-                    <div className="row">
-                      <div className="col-100">
-                        <input type="text" placeholder="Phone number"/>
-                      </div>
-                    </div>
+              <div className="row">
+                <div className="col-100">
+                  <input type="text" placeholder="Phone number" />
+                </div>
+              </div>
 
               <div className="row">
                 <div className="col-100">

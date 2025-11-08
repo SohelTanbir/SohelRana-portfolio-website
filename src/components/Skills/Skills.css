@@ -1,97 +1,96 @@
-.skill{
-    padding:5rem 0;
-    background-color: #55178B;
-    color: #ebebeb;
+.skill {
+  padding: 5rem 0;
+  background-color: #55178b;
+  color: #ebebeb;
 }
-.skill-heading{
-    text-align: center;
+.skill-heading {
+  text-align: center;
 }
-.skill-heading h4{
-    position: relative;
-    color:orange;
-    margin-bottom:3rem;
+.skill-heading h4 {
+  position: relative;
+  color: orange;
+  margin-bottom: 3rem;
 }
 .skill-heading h4::before {
-    left: 40%;
-    background-color:orange;
+  left: 40%;
+  background-color: orange;
 }
 .skill-heading h4::after {
-    right: 40%;
-    background-color:orange;
+  right: 40%;
+  background-color: orange;
 }
-.technical-skills{
-    flex-basis:50%;
+.technical-skills {
+  flex: 0 0 100% !important;
 }
 
-.comonSkill{
-    width:90%;
-    height:1.8rem;
-    background-color:#c8c8c8;
-    position: relative;
-    color: #fff;
-    overflow: hidden;
-    margin: 0 0 2rem;
-    padding:0;
+.comonSkill {
+  width: 100% !important;
+  background-color: #c8c8c8;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  margin: 0 0 2rem;
+  padding: 0;
 }
-.technical-skills span{
-    margin-left: .5rem;
+.technical-skills span {
+  margin-left: 0.5rem;
 }
-.comonSkill::after{
-    content: "95%";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width:95%;
-    height:100%;
-    background: blueviolet;
-    text-align: center;
-    display: block;
-    font-size: 1.4rem;
+.comonSkill::after {
+  content: "95%";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 95%;
+  height: 100%;
+  background: blueviolet;
+  text-align: center;
+  display: block;
+  font-size: 1.4rem;
 }
-.html-skill::after{
-    content: "98%";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width:98%;
-    height:100%;
-    background: blueviolet;
-    text-align: center;
-    display: block;
+.html-skill::after {
+  content: "98%";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 98%;
+  height: 100%;
+  background: blueviolet;
+  text-align: center;
+  display: block;
 }
-.css3::after{
-    content: "96%";
-    width:96%;
+.css3::after {
+  content: "96%";
+  width: 96%;
 }
-.javascript::after{
-    content: "92%";
-    width:92%;
+.javascript::after {
+  content: "92%";
+  width: 92%;
 }
-.reactjs::after{
-    content: "89%";
-    width:89%;
+.reactjs::after {
+  content: "89%";
+  width: 89%;
 }
-.bootstrap::after{
-    content: "96%";
-    width:96%;
+.bootstrap::after {
+  content: "96%";
+  width: 96%;
 }
-.sass::after{
-    content: "80%";
-    width:80%;
+.sass::after {
+  content: "80%";
+  width: 80%;
 }
-.jquery::after{
-    content: "90%";
-    width:90%;
+.jquery::after {
+  content: "90%";
+  width: 90%;
 }
-.nodejs::after{
-    content: "45%";
-    width:45%;
+.nodejs::after {
+  content: "45%";
+  width: 45%;
 }
-.Expressjs::after{
-    content: "48%";
-    width:48%;
+.Expressjs::after {
+  content: "48%";
+  width: 48%;
 }
-.mongodb::after{
-    content: "62%";
-    width:62%;
+.mongodb::after {
+  content: "62%";
+  width: 62%;
 }

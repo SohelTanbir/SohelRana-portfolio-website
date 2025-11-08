@@ -4,22 +4,24 @@ import About from '../About/About';
 import Banner from '../Banner/Banner';
 import Skills from '../Skills/Skills'
 import Projects from '../Projects/Projects'
+import Blog from '../Blog/Blog';
 import Footer from '../Footer/Footer';
-import Education from '../Education/Education';
+// Education section removed as requested
 import Contact from '../Contact/Contact';
 
 const Home = () => {
-    return (
-        <div className="home">
-          <Banner/>
-          <About/>
-          <Skills/>
-          <Projects/>
-          <Contact/>
-          <Education/>
-          <Footer/>
-        </div>
-    );
+  return (
+    <div className="home">
+      <Banner />
+      <About />
+      <Skills />
+      <Projects />
+  <Blog />
+      <Contact />
+      {/* <Education /> */}
+      <Footer />
+    </div>
+  );
 };
 
 export default Home;

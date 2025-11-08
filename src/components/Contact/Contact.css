@@ -1,102 +1,115 @@
-#contact-section{
-    width: 100%;
-    background: #fbfbfb;
-    padding: 5rem 0;
+#contact-section {
+  width: 100%;
+  background: #fbfbfb;
+  padding: 5rem 0;
 }
 /*
 -------------------------------------------------------
 ---------- Section:11 Contact us Section CSS ----------
 -------------------------------------------------------
 */
-#contact_us{
-    width:100%;
-    padding: 100px 0;
-    background:#3C5499;
+#contact_us {
+  width: 100%;
+  padding: 100px 0;
+  background: #3c5499;
 }
-#contact_us h2::after{
-   background-color:#0c7fca;
+#contact_us h2::after {
+  background-color: #0c7fca;
 }
-.input_box{
-    width:75%;
-    margin: auto;
+.input_box {
+  width: 75%;
+  margin: auto;
 }
-.input_box .row{
-    margin-bottom: 1.6rem;
-    display: flex !important;
-    gap: 1.6rem;
+.input_box .row {
+  margin-bottom: 1.6rem;
+  display: flex !important;
+  gap: 1.6rem;
 }
 .input_box input,
-.input_box textarea{
-    font-family: Poppins, sans-serif;
-    border: none;
-    outline: none;
-    background: #f5f6f8;
-    display: block;
-    padding: 22px 20px;
-    margin-bottom:0;
-    border-radius:6px;
-    color: #374151;
-    font-size: 1.6rem;
+.input_box textarea {
+  font-family: Poppins, sans-serif;
+  border: none;
+  outline: none;
+  background: #f5f6f8;
+  display: block;
+  padding: 22px 20px;
+  margin-bottom: 0;
+  border-radius: 6px;
+  color: #374151;
+  font-size: 1.6rem;
 }
-.input_box input::placeholder, .input_box textarea::placeholder{
-    color: #9ca3af;
+.input_box input::placeholder,
+.input_box textarea::placeholder {
+  color: #9ca3af;
 }
-.input_box .col-50{
-    /* ensure two equal columns inside the contact form */
-    flex: 0 0 48% !important;
-    max-width: 48% !important;
-    padding: 0 .8rem;
-    box-sizing: border-box;
+.input_box .col-50 {
+  /* ensure two equal columns inside the contact form */
+  flex: 0 0 48% !important;
+  max-width: 48% !important;
+  padding: 0 0.8rem;
+  box-sizing: border-box;
 }
-.input_box .col-50 input{
-    width:100%;
+
+.input_box .col-100 {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  padding: 0 0.8rem;
+  box-sizing: border-box;
 }
-.input_box textarea{
-    width:100%;
-    min-height:140px;
-    resize: vertical;
+
+.input_box input,
+.input_box textarea {
+  width: 100%;
 }
-.input_box .btn{
-    padding: 1rem 2.6rem;
-    cursor: pointer;
-    border-radius: 999px;
-    border: none;
+.input_box .col-50 input {
+  width: 100%;
 }
-.input_box .primary-btn{
-    background: linear-gradient(90deg,#4f46e5,#3b82f6);
-    color:#fff;
-    box-shadow: 0 8px 20px rgba(59,130,246,0.18);
+.input_box textarea {
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
 }
-.input_box .primary-btn:hover{
-    transform: translateY(-1px);
+.input_box .btn {
+  padding: 1rem 2.6rem;
+  cursor: pointer;
+  border-radius: 999px;
+  border: none;
+}
+.input_box .primary-btn {
+  background: linear-gradient(90deg, #4f46e5, #3b82f6);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.18);
+}
+.input_box .primary-btn:hover {
+  transform: translateY(-1px);
 }
 
 @media only screen and (max-width: 768px) {
-    .input_box .col-50 {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        padding: 0;
-    }
+  .input_box .col-50 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 0;
+  }
 }
 
 /* Section title styles to match reference */
-.section_title{
-    margin-bottom: 3.5rem;
+.section_title {
+  margin-bottom: 3.5rem;
 }
-.section_title .subtitle{
-    color:#5563ff;
-    font-weight:700;
-    letter-spacing:1px;
-    margin-bottom:.8rem;
+.section_title .subtitle {
+  color: #5563ff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
 }
-.section_title h2{
-    font-size:3.2rem;
-    margin:0 0 1rem 0;
-    color:#0b1226;
+.section_title h2 {
+  font-size: 3.2rem;
+  margin: 0 0 1rem 0;
+  color: #0b1226;
 }
-.section_title .lead{
-    color:#9aa3b2;
-    max-width:780px;
-    margin:0 auto;
-    font-size:1.4rem;
+.section_title .lead {
+  color: #9aa3b2;
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.4rem;
 }

@@ -14,20 +14,20 @@ import Blog from './components/Blog/Blog';
 import Contact from './components/Contact/Contact';
 
 function App() {
-  return (
-    <Router>
-      <Header/>
-     <Routes>
-       <Route path="/" element={<Home/>} />
-       <Route path="/home" element={<Home/>} />
-       <Route path="/about" element={<About/>} />
-       <Route path="/skills" element={<Skills/>} />
-       <Route path="/projects" element={<Projects/>} />
-       <Route path="/blog" element={<Blog/>} />
-       <Route path="/contact" element={<Contact/>} />
-     </Routes>
-    </Router>
-  );
+   return (
+      <Router>
+         <Header />
+         <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+         </Routes>
+      </Router>
+   );
 }
 
 export default App;
