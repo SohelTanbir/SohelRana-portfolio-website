@@ -14,7 +14,10 @@
     flex-wrap:wrap;
 }
 .banner-text{
-    flex-basis:50%;
+    /* allow the text column to grow/shrink so it takes available space */
+    flex: 1 1 50%;
+    text-align: left;
+    padding-right: 1.5rem;
 }
 .banner-text h1{
     color:blueviolet;
@@ -50,15 +53,17 @@
     margin-top:1rem;
 }
 .banner-image{
-    flex-basis:50%;
+    /* allow image column to grow and align to the right */
+    flex: 1 1 50%;
     display:flex;
-    justify-content:center;
+    justify-content:flex-end;
+    padding-left: 1.5rem;
 }
 .banner-image img{
-    max-width:100%;
+    max-width:480px;
+    width:100%;
     height:auto;
     display:block;
-    border-radius:50%;
     object-fit:cover;
 }
 .social-top{
