@@ -35,7 +35,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+              <div style={{ marginTop: '2.5rem' }}>
                 <input type="submit" className="btn primary-btn" value="Send Message" />
               </div>
             </form>

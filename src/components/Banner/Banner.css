@@ -304,7 +304,7 @@
 .comonBtn {
   border: none;
   outline: none;
-  background: #55178b;
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
   color: #fff;
   padding: 0.5rem 2rem;
   font-weight: 500;
@@ -316,9 +316,9 @@
   transition: all 0.3s ease-in-out;
 }
 .comonBtn:hover {
-  color: #55178b;
-  border: 0.3rem solid #55178b;
-  background: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4);
+  background: linear-gradient(135deg, #ff3838 0%, #ff5252 100%);
 }
 .banner-text p {
   font-size: 1.8rem;

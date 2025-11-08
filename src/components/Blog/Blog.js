@@ -8,24 +8,30 @@ import img3 from '../../images/portfolio/portfolio-3.png';
 const posts = [
     {
         id: 1,
-        title: 'Exploring MERN Stack: Powering Modern Web Development',
+        title: 'Why I Switched to Sketch For UI Design',
         excerpt:
             'In the world of web development, staying ahead of the curve is crucial. One technology stack that has...',
         img: img1,
+        date: '05 Mar 2020',
+        category: 'Design',
     },
     {
         id: 2,
-        title: 'Test webhook',
+        title: 'Best Practices for Animated Progress Indicators',
         excerpt:
             'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...',
         img: img2,
+        date: '23 Feb 2020',
+        category: 'UI',
     },
     {
         id: 3,
-        title: 'The Power of UI/UX: Elevating Digital Experiences',
+        title: 'Designing the Perfect Feature Comparison Table',
         excerpt:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.',
         img: img3,
+        date: '06 Feb 2020',
+        category: 'Design',
     },
 ];
 
@@ -48,9 +54,10 @@ const Blog = () => {
                                 <img src={post.img} alt={post.title} />
                             </div>
                             <div className="card-body">
+                                <div className="card-meta">
+                                    <span className="card-date">{post.date}</span>
+                                </div>
                                 <h3 className="card-title">{post.title}</h3>
-                                <p className="card-excerpt">{post.excerpt}</p>
-                                <a className="read-more" href="#">Read More</a>
                             </div>
                         </article>
                     ))}

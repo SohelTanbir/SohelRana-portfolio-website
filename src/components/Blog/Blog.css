@@ -4,90 +4,148 @@
 }
 .container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 .section-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 .kicker {
   display: inline-block;
-  color: #6b7cff;
-  font-weight: 600;
-  letter-spacing: 1px;
-  font-size: 13px;
-  margin-bottom: 8px;
+  color: #ff4757;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 .section-title {
-  font-size: 40px;
-  margin: 0 0 12px;
+  font-size: 3.6rem;
+  margin: 0 0 1.5rem;
   color: #0b1727;
+  font-weight: 700;
 }
 .section-lead {
   color: #9aa3b2;
   max-width: 720px;
   margin: 0 auto;
+  font-size: 1.6rem;
+  line-height: 1.6;
 }
 
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 3rem;
+  row-gap: 4rem;
 }
 
 .blog-card {
-  background: #fff;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
-  overflow: hidden;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease;
+}
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+.card-media {
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.card-media::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ffffff;
+  color: #2c3e50;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  z-index: 2;
+}
+.blog-card:nth-child(1) .card-media::before {
+  content: "Design";
+}
+.blog-card:nth-child(2) .card-media::before {
+  content: "UI";
+}
+.blog-card:nth-child(3) .card-media::before {
+  content: "Design";
+}
+.blog-card:nth-child(4) .card-media::before {
+  content: "UI";
 }
 .card-media img {
   width: 100%;
-  height: 200px;
+  height: 280px;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
+}
+.blog-card:hover .card-media img {
+  transform: scale(1.05);
 }
 .card-body {
-  padding: 22px;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  gap: 1.2rem;
+}
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.3rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+.card-date {
+  color: #9ca3af;
+}
+.card-category {
+  display: none;
 }
 .card-title {
-  font-size: 18px;
-  color: #08112a;
-  margin: 0 0 10px;
+  font-size: 2.4rem;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 700;
 }
 .card-excerpt {
-  color: #9aa3b2;
-  font-size: 14px;
-  margin-bottom: 16px;
-  flex: 1 1 auto;
+  display: none;
 }
 .read-more {
-  color: #0b47ff;
-  text-decoration: underline;
-  font-weight: 600;
-  align-self: flex-start;
+  display: none;
 }
 
 @media (max-width: 900px) {
   .blog-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
   }
 }
 @media (max-width: 640px) {
   .blog-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
+  .blog-card {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 640px) {
   .card-media img {
-    height: 180px;
-  }
-  .section-title {
-    font-size: 30px;
+    height: 220px;
   }
 }
