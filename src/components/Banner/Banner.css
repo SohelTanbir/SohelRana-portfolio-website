@@ -2,6 +2,17 @@
     width:100%;
     padding:1rem 0 6rem;
 }
+.container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 1rem;
+}
+.row{
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    flex-wrap:wrap;
+}
 .banner-text{
     flex-basis:50%;
 }
@@ -39,10 +50,16 @@
     margin-top:1rem;
 }
 .banner-image{
-    width:50%;
+    flex-basis:50%;
+    display:flex;
+    justify-content:center;
 }
 .banner-image img{
-    height:55rem;
+    max-width:100%;
+    height:auto;
+    display:block;
+    border-radius:50%;
+    object-fit:cover;
 }
 .social-top{
     margin:3rem 0;
