@@ -17,7 +17,7 @@
    background-color:#0c7fca;
 }
 .input_box{
-    width:80%;
+    width:75%;
     margin: auto;
 }
 .input_box .row{
@@ -65,4 +65,26 @@
 }
 .input_box .primary-btn:hover{
     transform: translateY(-1px);
+}
+
+/* Section title styles to match reference */
+.section_title{
+    margin-bottom: 3.5rem;
+}
+.section_title .subtitle{
+    color:#5563ff;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:.8rem;
+}
+.section_title h2{
+    font-size:3.2rem;
+    margin:0 0 1rem 0;
+    color:#0b1226;
+}
+.section_title .lead{
+    color:#9aa3b2;
+    max-width:780px;
+    margin:0 auto;
+    font-size:1.4rem;
 }
