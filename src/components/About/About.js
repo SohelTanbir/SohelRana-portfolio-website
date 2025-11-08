@@ -1,6 +1,5 @@
 import React from 'react';
 import './About.css';
-import myphoto from '../../images/myphoto/profile1.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt, faBirthdayCake } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,7 +9,7 @@ const About = () => {
             <div className="container">
                 <div className="about-content">
                     <div className="about-image">
-                        <img src={myphoto} alt="Sohel Rana" />
+                        <img src="/assets/images/profile/profile.jpg" alt="Sohel Rana" />
                     </div>
                     <div className="about-details">
                         <h2 className="about-title">Who Am I?</h2>

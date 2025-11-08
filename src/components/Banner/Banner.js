@@ -1,6 +1,5 @@
 import React from 'react';
 import './Banner.css';
-import profileImage from '../../images/myphoto/profile1.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
@@ -12,7 +11,7 @@ const Banner = () => {
                 <div className="banner-content">
                     <div className="profile-image-wrapper">
                         <div className="profile-image">
-                            <img src={profileImage} alt="Sohel Rana" />
+                            <img src="/assets/images/profile/profile.jpg" alt="Sohel Rana" />
                         </div>
                     </div>
 
