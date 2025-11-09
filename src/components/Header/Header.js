@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -6,6 +6,31 @@ import { faBars, faTimes, faHome, faUser, faCode, faBriefcase, faBlog, faEnvelop
 
 
 const Header = () => {
+    const [activeSection, setActiveSection] = useState('home');
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = ['home', 'about', 'skills', 'projects', 'blog', 'contact'];
+            const scrollPosition = window.scrollY + 100;
+
+            for (const sectionId of sections) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const offsetTop = section.offsetTop;
+                    const offsetBottom = offsetTop + section.offsetHeight;
+
+                    if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+                        setActiveSection(sectionId);
+                        break;
+                    }
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     const openMenu = () => {
         document.getElementById("nav").classList.add('active');
         document.getElementById("overlay").classList.add('active');
@@ -20,6 +45,8 @@ const Header = () => {
         const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Let the scroll handler update the active state naturally
+            // Don't manually set it here to avoid the flash
         }
     }
 
@@ -42,32 +69,32 @@ const Header = () => {
                             </div>
                             <ul>
                                 <li>
-                                    <a href="#home" className="nav-btn" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
+                                    <a href="#home" className={`nav-btn ${activeSection === 'home' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
                                         <FontAwesomeIcon icon={faHome} /> Home
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#about" className="nav-btn" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>
+                                    <a href="#about" className={`nav-btn ${activeSection === 'about' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>
                                         <FontAwesomeIcon icon={faUser} /> About
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#skills" className="nav-btn" onClick={(e) => { e.preventDefault(); scrollToSection('skills'); }}>
+                                    <a href="#skills" className={`nav-btn ${activeSection === 'skills' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('skills'); }}>
                                         <FontAwesomeIcon icon={faCode} /> Resume
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#projects" className="nav-btn" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}>
+                                    <a href="#projects" className={`nav-btn ${activeSection === 'projects' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}>
                                         <FontAwesomeIcon icon={faBriefcase} /> Works
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#blog" className="nav-btn" onClick={(e) => { e.preventDefault(); scrollToSection('blog'); }}>
+                                    <a href="#blog" className={`nav-btn ${activeSection === 'blog' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('blog'); }}>
                                         <FontAwesomeIcon icon={faBlog} /> Blogs
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#contact" className="nav-btn" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
+                                    <a href="#contact" className={`nav-btn ${activeSection === 'contact' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
                                         <FontAwesomeIcon icon={faEnvelope} /> Contact
                                     </a>
                                 </li>

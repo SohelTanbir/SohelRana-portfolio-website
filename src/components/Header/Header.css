@@ -72,35 +72,50 @@
   gap: 0.5rem;
   margin-left: 1.2rem;
   padding: 0.7rem 1.5rem;
-  transition: all 0.3s ease;
-
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #fff;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   font-size: 1.5rem;
   font-weight: 500;
 }
-.header .navbar ul li a {
-  color: #fff;
-}
 
 .navbar ul li a svg {
   font-size: 1.4rem;
+  transition: transform 0.3s ease;
 }
-.navbar ul li:first-child a {
-  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+
+.navbar ul li a.active {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%) !important;
   color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
 }
+
+.navbar ul li a.active svg {
+  transform: scale(1.1);
+}
+
 .navbar ul li a::after {
   display: none;
 }
+
 .navbar ul li a:hover {
-  background: #ffffff33;
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
-.navbar ul li:first-child a:hover {
-  background: linear-gradient(135deg, #ff3838 0%, #ff5252 100%);
-  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+
+.navbar ul li a:hover svg {
+  transform: scale(1.05);
+}
+
+.navbar ul li a.active:hover {
+  background: linear-gradient(135deg, #ff3838 0%, #ff5252 100%) !important;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.5);
+}
+
+.navbar ul li a.active:hover svg {
+  transform: scale(1.15);
 }
 
 .header .row {
