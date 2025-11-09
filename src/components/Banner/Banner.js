@@ -3,6 +3,7 @@ import './Banner.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import TypedText from '../TypedText/TypedText';
 
 const Banner = () => {
     return (
@@ -16,7 +17,8 @@ const Banner = () => {
                     </div>
 
                     <h1 className="profile-name">Sohel Rana</h1>
-                    <p className="profile-title">Full Stack Web Developer</p>
+                    {/* <p className="profile-title">MERN Stack Developer</p> */}
+                    <TypedText />
 
                     <div className="social-links">
                         <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="social-icon facebook">

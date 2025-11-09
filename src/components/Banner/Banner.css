@@ -51,10 +51,11 @@
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 .profile-title {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   color: #7f8c8d;
   margin-bottom: 2rem;
   font-weight: 400;
@@ -210,7 +211,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .banner {
-    min-height: 70vh;
+    min-height: 60vh;
     padding: 3rem 1.5rem;
   }
 
@@ -220,11 +221,11 @@
   }
 
   .profile-name {
-    font-size: 2.5rem;
+    font-size: 40rem;
   }
 
   .profile-title {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 
   .social-icon {
@@ -253,10 +254,6 @@
     font-size: 2.2rem;
   }
 
-  .profile-title {
-    font-size: 1.1rem;
-  }
-
   .social-links {
     gap: 1rem;
   }
@@ -265,11 +262,6 @@
     width: 36px;
     height: 36px;
     font-size: 1.3rem;
-  }
-
-  .download-cv-btn {
-    font-size: 1.2rem;
-    padding: 0.8rem 1.8rem;
   }
 }
 

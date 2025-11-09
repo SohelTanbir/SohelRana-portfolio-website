@@ -10,7 +10,7 @@
   z-index: 1000;
 }
 .header .logo a {
-  text-transform: lowercase;
+  text-transform: uppercase;
   font-weight: 700;
   color: #ff4757;
   font-size: 2rem;
