@@ -14,9 +14,7 @@ import {
 import {
     FaReact,
     FaNodeJs,
-    FaAws,
-    FaDocker,
-    FaFigma,
+    FaBootstrap,
 } from "react-icons/fa";
 import {
     SiNextdotjs,
@@ -24,32 +22,38 @@ import {
     SiShopify,
     SiMongodb,
     SiExpress,
+    SiRedux,
+    SiSocketdotio,
+    SiJquery,
+    SiCss3,
 } from "react-icons/si";
 
 const About = () => {
     const tools = [
-        { name: "React", icon: <FaReact size={28} color="#61DAFB" /> },
-        { name: "Next.js", icon: <SiNextdotjs size={24} color="#ffffff" /> },
-        { name: "Node.js", icon: <FaNodeJs size={28} color="#7cc327" /> },
-        { name: "Express", icon: <SiExpress size={24} color="#ffffff" /> },
-        { name: "MongoDB", icon: <SiMongodb size={24} color="#00ED64" /> },
-        { name: "Tailwind", icon: <SiTailwindcss size={26} color="#38BDF8" /> },
-        { name: "Shopify", icon: <SiShopify size={24} color="#95BF47" /> },
-        { name: "AWS", icon: <FaAws size={26} color="#FF9900" /> },
-        { name: "Docker", icon: <FaDocker size={26} color="#2496ED" /> },
-        { name: "Figma", icon: <FaFigma size={26} color="#F24E1E" /> },
+        { name: "React", icon: <FaReact size={28} color="#61DAFB" />, gradient: "linear-gradient(135deg, #f0fbff 0%, #e3f5fc 100%)" },
+        { name: "Next.js", icon: <SiNextdotjs size={24} color="#000000" />, gradient: "linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%)" },
+        { name: "Node.js", icon: <FaNodeJs size={28} color="#68A063" />, gradient: "linear-gradient(135deg, #f3faf4 0%, #e8f5e9 100%)" },
+        { name: "Express", icon: <SiExpress size={24} color="#000000" />, gradient: "linear-gradient(135deg, #fafbfc 0%, #f3f4f6 100%)" },
+        { name: "MongoDB", icon: <SiMongodb size={24} color="#00A940" />, gradient: "linear-gradient(135deg, #f0faf5 0%, #e0f2e9 100%)" },
+        { name: "Tailwind", icon: <SiTailwindcss size={26} color="#38BDF8" />, gradient: "linear-gradient(135deg, #f0fbff 0%, #e1f5fe 100%)" },
+        { name: "Shopify", icon: <SiShopify size={24} color="#7ab55c" />, gradient: "linear-gradient(135deg, #f9fdf7 0%, #f1f8e9 100%)" },
+        { name: "Redux", icon: <SiRedux size={24} color="#764ABC" />, gradient: "linear-gradient(135deg, #f8f5fc 0%, #ede7f6 100%)" },
+        { name: "Bootstrap", icon: <FaBootstrap size={26} color="#7952B3" />, gradient: "linear-gradient(135deg, #f5f3f9 0%, #e8e4f3 100%)" },
+        { name: "Socket.io", icon: <SiSocketdotio size={24} color="#010101" />, gradient: "linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%)" },
+        { name: "jQuery", icon: <SiJquery size={24} color="#0769AD" />, gradient: "linear-gradient(135deg, #f0f7fb 0%, #e3f2fd 100%)" },
+        { name: "CSS3", icon: <SiCss3 size={24} color="#1572B6" />, gradient: "linear-gradient(135deg, #f0f8fc 0%, #e1f5fe 100%)" },
     ];
 
     const education = [
         {
-            degree: "Bachelor of Science in Computer Science",
-            institution: "University of Technology",
-            year: "2018 - 2022"
+            degree: "BSc in Computer Science and Engineering.",
+            institution: "Canadian University of Bangladesh",
+            year: "2023 - 2026"
         },
         {
-            degree: "Full Stack Web Development Certification",
-            institution: "Online Learning Platform",
-            year: "2022"
+            degree: "Diploma in Computer Engineering.",
+            institution: "Thakurgaon Polytechnic Institute",
+            year: "2017 - 2021"
         }
     ];
 
@@ -76,7 +80,7 @@ const About = () => {
                 <div className="about-content">
                     {/* LEFT: Education */}
                     <div className="about-left">
-                        <h3 className="subsection-title">Education</h3>
+                        {/* <h3 className="subsection-title">Education</h3> */}
                         <div className="education-list">
                             {education.map((edu, i) => (
                                 <div key={i} className="education-card">
@@ -98,10 +102,15 @@ const About = () => {
 
                     {/* RIGHT: Technologies */}
                     <div className="about-right">
-                        <h3 className="subsection-title">Core Technologies</h3>
+                        {/* <h3 className="subsection-title">Core Technologies</h3> */}
                         <div className="tools-grid">
                             {tools.map((tool, i) => (
-                                <div key={i} className="tool-card" title={tool.name}>
+                                <div
+                                    key={i}
+                                    className="tool-card"
+                                    title={tool.name}
+                                    style={{ background: tool.gradient }}
+                                >
                                     <div className="tool-icon">{tool.icon}</div>
                                     <span className="tool-name">{tool.name}</span>
                                 </div>
@@ -113,7 +122,7 @@ const About = () => {
                 {/* Contact Me Button - Centered */}
                 <div className="about-cta">
                     <button className="contact-me-btn" onClick={scrollToContact}>
-                        <FontAwesomeIcon icon={faEnvelope} />
+
                         Contact Me
                     </button>
                 </div>
