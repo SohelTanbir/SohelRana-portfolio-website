@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Get In Touch</h2>
-          <p className="section-lead">Have a project in mind? Let's discuss how we can work together to bring your ideas to life.</p>
+          <p className="section-lead">Looking to build something amazing? I design and develop custom web solutions that turn creative ideas into engaging digital realities.</p>
         </div>
 
         <div className="contact-content">
