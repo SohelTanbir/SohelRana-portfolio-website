@@ -20,7 +20,12 @@
   margin-bottom: 1.5rem;
   font-family: "Poppins", sans-serif;
 }
-
+.about-left,
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 .about .section-lead {
   font-size: 1.7rem;
   color: #6b7280;
@@ -38,10 +43,9 @@
 
 /* Subsection Titles */
 .subsection-title {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: #1f2937;
-  margin-bottom: 2rem;
   font-family: "Poppins", sans-serif;
 }
 
@@ -49,7 +53,7 @@
 .education-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .education-card {
@@ -89,7 +93,7 @@
   font-size: 1.4rem;
   font-weight: bold;
   color: #1f2937;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
   line-height: 1.4;
   font-family: "Poppins", sans-serif;
 }
@@ -114,6 +118,15 @@
 .education-year svg {
   color: #ff4757;
   font-size: 1.3rem;
+}
+
+/* Experience Cards */
+.experience-card {
+  /* Inherits all styles from .education-card */
+}
+
+.experience-icon {
+  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%) !important;
 }
 
 /* RIGHT: Technologies */
@@ -201,6 +214,10 @@
     gap: 3rem;
   }
 
+  .about-left {
+    order: 2;
+  }
+
   .tools-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -220,7 +237,7 @@
   }
 
   .subsection-title {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   .tools-grid {
@@ -249,10 +266,6 @@
   .tool-card {
     padding: 1.2rem 0.8rem;
     min-height: 75px;
-  }
-
-  .tool-name {
-    font-size: 1.1rem;
   }
 
   .education-card {
