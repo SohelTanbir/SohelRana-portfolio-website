@@ -10,6 +10,7 @@
   z-index: 999;
 }
 .header .logo a {
+  font-family: "Inter", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #ff4757;
@@ -165,7 +166,8 @@
   }
 
   .mobile-logo a {
-    text-transform: lowercase;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
     font-weight: 700;
     color: #ff4757;
     font-size: 2rem;

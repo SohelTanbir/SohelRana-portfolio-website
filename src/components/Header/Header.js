@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes, faHome, faUser, faCode, faBriefcase, faBlog, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faHome, faUser, faCode, faBriefcase, faBlog, faEnvelope, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 
 
 const Header = () => {
@@ -102,7 +102,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="mobile-menu">
-                        <span id="bars" onClick={openMenu}><FontAwesomeIcon icon={faBars} /></span>
+                        <span id="bars" onClick={openMenu}><FontAwesomeIcon icon={faBarsStaggered} /></span>
                     </div>
                 </div>
             </div>

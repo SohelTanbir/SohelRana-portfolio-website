@@ -52,11 +52,11 @@ const Skills = () => {
                     {/* Tools & Technologies Column */}
                     <div className="tools-technologies-column">
                         <h3>Tools & Technologies</h3>
-                        <div className="tools-grid">
+                        <div className="skills-tools-grid">
                             {tools.map((tool, index) => (
-                                <div key={index} className="tool-card">
-                                    <div className="tool-icon">{tool.icon}</div>
-                                    <span className="tool-name">{tool.name}</span>
+                                <div key={index} className="skills-tool-card">
+                                    <div className="skills-tool-icon">{tool.icon}</div>
+                                    <span className="skills-tool-name">{tool.name}</span>
                                 </div>
                             ))}
                         </div>

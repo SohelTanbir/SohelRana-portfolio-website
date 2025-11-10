@@ -12,12 +12,11 @@ const Banner = () => {
                 <div className="banner-content">
                     <div className="profile-image-wrapper">
                         <div className="profile-image">
-                            <img src="/assets/images/profile/profile.jpg" alt="Sohel Rana" />
+                            <img src="/assets/images/profile/sohelrana-profile.jpg" alt="Sohel Rana" />
                         </div>
                     </div>
 
                     <h1 className="profile-name">Sohel Rana</h1>
-                    {/* <p className="profile-title">MERN Stack Developer</p> */}
                     <TypedText />
 
                     <div className="social-links">

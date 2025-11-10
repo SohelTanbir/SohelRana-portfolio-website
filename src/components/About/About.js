@@ -1,73 +1,124 @@
-import React from 'react';
-import './About.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope, faMapMarkerAlt, faBirthdayCake } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import "./About.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faBirthdayCake,
+    faEnvelope,
+    faMapMarkerAlt,
+    faPhone,
+    faGraduationCap,
+    faCalendarAlt,
+} from "@fortawesome/free-solid-svg-icons";
+
+// Brand/dev icons
+import {
+    FaReact,
+    FaNodeJs,
+    FaAws,
+    FaDocker,
+    FaFigma,
+} from "react-icons/fa";
+import {
+    SiNextdotjs,
+    SiTailwindcss,
+    SiShopify,
+    SiMongodb,
+    SiExpress,
+} from "react-icons/si";
 
 const About = () => {
+    const tools = [
+        { name: "React", icon: <FaReact size={28} color="#61DAFB" /> },
+        { name: "Next.js", icon: <SiNextdotjs size={24} color="#ffffff" /> },
+        { name: "Node.js", icon: <FaNodeJs size={28} color="#7cc327" /> },
+        { name: "Express", icon: <SiExpress size={24} color="#ffffff" /> },
+        { name: "MongoDB", icon: <SiMongodb size={24} color="#00ED64" /> },
+        { name: "Tailwind", icon: <SiTailwindcss size={26} color="#38BDF8" /> },
+        { name: "Shopify", icon: <SiShopify size={24} color="#95BF47" /> },
+        { name: "AWS", icon: <FaAws size={26} color="#FF9900" /> },
+        { name: "Docker", icon: <FaDocker size={26} color="#2496ED" /> },
+        { name: "Figma", icon: <FaFigma size={26} color="#F24E1E" /> },
+    ];
+
+    const education = [
+        {
+            degree: "Bachelor of Science in Computer Science",
+            institution: "University of Technology",
+            year: "2018 - 2022"
+        },
+        {
+            degree: "Full Stack Web Development Certification",
+            institution: "Online Learning Platform",
+            year: "2022"
+        }
+    ];
+
+    const scrollToContact = () => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
     return (
-        <div className="about" id="about">
+        <section className="about" id="about" aria-label="About">
             <div className="container">
+                {/* Section Header */}
+                <div className="section-header">
+                    <h2 className="section-title">About Me</h2>
+                    <p className="section-lead">
+                        I craft fast, accessible, and maintainable products with React, Next.js, Tailwind, and Shopify Polaris —
+                        turning complex ideas into elegant, scalable interfaces.
+                    </p>
+                </div>
+
+                {/* Two Column Layout */}
                 <div className="about-content">
-                    <div className="about-image">
-                        <img src="/assets/images/profile/profile.jpg" alt="Sohel Rana" />
+                    {/* LEFT: Education */}
+                    <div className="about-left">
+                        <h3 className="subsection-title">Education</h3>
+                        <div className="education-list">
+                            {education.map((edu, i) => (
+                                <div key={i} className="education-card">
+                                    <div className="education-icon">
+                                        <FontAwesomeIcon icon={faGraduationCap} />
+                                    </div>
+                                    <div className="education-content">
+                                        <h4 className="education-degree">{edu.degree}</h4>
+                                        <p className="education-institution">{edu.institution}</p>
+                                        <div className="education-year">
+                                            <FontAwesomeIcon icon={faCalendarAlt} />
+                                            <span>{edu.year}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                    <div className="about-details">
-                        <h2 className="about-title">Who Am I?</h2>
-                        <p className="about-intro">
-                            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development
-                            and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.
-                        </p>
-                        <p className="about-description">
-                            My aim is to bring across your message and identity in the most creative way. I created web
-                            design for many famous brand companies.
-                        </p>
 
-                        <h3 className="personal-info-title">Personal Info</h3>
-                        <div className="personal-info-grid">
-                            <div className="info-item">
-                                <div className="info-icon phone">
-                                    <FontAwesomeIcon icon={faPhone} />
+                    {/* RIGHT: Technologies */}
+                    <div className="about-right">
+                        <h3 className="subsection-title">Core Technologies</h3>
+                        <div className="tools-grid">
+                            {tools.map((tool, i) => (
+                                <div key={i} className="tool-card" title={tool.name}>
+                                    <div className="tool-icon">{tool.icon}</div>
+                                    <span className="tool-name">{tool.name}</span>
                                 </div>
-                                <div className="info-content">
-                                    <span className="info-label">Phone</span>
-                                    <span className="info-value">+123 456 7890</span>
-                                </div>
-                            </div>
-
-                            <div className="info-item">
-                                <div className="info-icon email">
-                                    <FontAwesomeIcon icon={faEnvelope} />
-                                </div>
-                                <div className="info-content">
-                                    <span className="info-label">Email</span>
-                                    <span className="info-value">Example@Mail.Com</span>
-                                </div>
-                            </div>
-
-                            <div className="info-item">
-                                <div className="info-icon location">
-                                    <FontAwesomeIcon icon={faMapMarkerAlt} />
-                                </div>
-                                <div className="info-content">
-                                    <span className="info-label">Location</span>
-                                    <span className="info-value">Hong Kong China</span>
-                                </div>
-                            </div>
-
-                            <div className="info-item">
-                                <div className="info-icon birthday">
-                                    <FontAwesomeIcon icon={faBirthdayCake} />
-                                </div>
-                                <div className="info-content">
-                                    <span className="info-label">Birthday</span>
-                                    <span className="info-value">May 27, 1990</span>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>
+
+                {/* Contact Me Button - Centered */}
+                <div className="about-cta">
+                    <button className="contact-me-btn" onClick={scrollToContact}>
+                        <FontAwesomeIcon icon={faEnvelope} />
+                        Contact Me
+                    </button>
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 
