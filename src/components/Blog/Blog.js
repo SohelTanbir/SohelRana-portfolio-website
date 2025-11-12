@@ -4,6 +4,7 @@ import './Blog.css';
 import img1 from '../../images/portfolio/portfolio-1.png';
 import img2 from '../../images/portfolio/portfolio-2.png';
 import img3 from '../../images/portfolio/portfolio-3.png';
+import { Blogs } from '../../Data/Data';
 
 const posts = [
     {
@@ -42,21 +43,23 @@ const Blog = () => {
                 <div className="section-header">
                     <h2 className="section-title">Latest Blogs</h2>
                     <p className="section-lead">
-                        There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.
+                        Explore my latest blogs, sharing insights, tips, and experiences from the world of web development and modern tech.
                     </p>
                 </div>
 
                 <div className="blog-grid">
-                    {posts.map((post) => (
-                        <article className="blog-card" key={post.id}>
+                    {Blogs.map((blog) => (
+                        <article className="blog-card" key={blog.id}>
                             <div className="card-media">
-                                <img src={post.img} alt={post.title} />
+                                <a href={blog.link} target="_blank" rel="noopener noreferrer">
+                                    <img src={blog.thumbnail} alt={blog.title} />
+                                </a>
                             </div>
                             <div className="card-body">
                                 <div className="card-meta">
-                                    <span className="card-date">{post.date}</span>
+                                    <span className="card-date">{blog.date}</span>
                                 </div>
-                                <h3 className="card-title">{post.title}</h3>
+                                <a href={blog.link} target="_blank" rel="noopener noreferrer" className="card-title">{blog.title}</a>
                             </div>
                         </article>
                     ))}

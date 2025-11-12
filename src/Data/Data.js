@@ -204,23 +204,26 @@ export const CoreTechnologies = [
 export const Blogs = [
     {
         id: 1,
-        title: "প্রম্পট ইঞ্জিনিয়ারিং: Ai কে বোঝানোর সহজ কৌশল",
+        title: "প্রম্পট ইঞ্জিনিয়ারিং: AI কে বোঝানোর সহজ কৌশল",
         date: "Sep 12, 2025",
         link: "https://sohelrana.hashnode.dev",
-        thumbnail: '/assets/blogs/prompt-engineering.png',
+        thumbnail: '/assets/images/blogs/prompt-engineering.png',
+        category: 'AI',
     },
     {
         id: 2,
         title: "সিনক্রোনাস ও অ্যাসিনক্রোনাস প্রোগ্রামিং ইন জাভাস্ক্রিপ্ট।",
         date: "Oct 19, 2024",
         link: "https://synchronous-asynchronous.hashnode.dev",
-        thumbnail: '/assets/blogs/synchronous-asynchronous.png',
+        thumbnail: '/assets/images/blogs/synchronous-asynchronous.png',
+        category: 'JavaScript',
     },
     {
         id: 3,
         title: "এক পলকে Git stash",
         date: "Dec 28, 2024",
         link: "https://git-stash.hashnode.dev/",
-        thumbnail: '/assets/blogs/git-stash-cover.png',
+        thumbnail: '/assets/images/blogs/git stash-cover.webp',
+        category: 'Git',
     },
 ]
