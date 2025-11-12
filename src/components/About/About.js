@@ -28,6 +28,7 @@ import {
     SiJquery,
     SiCss3,
 } from "react-icons/si";
+import { education, experience } from "../../Data/Data";
 
 const About = () => {
     const tools = [
@@ -45,31 +46,7 @@ const About = () => {
         { name: "Shopify", icon: <SiShopify size={30} color="#7ab55c" />, gradient: "linear-gradient(135deg, #f9fdf7 0%, #f1f8e9 100%)" },
     ];
 
-    const education = [
-        {
-            degree: "BSc in Computer Science and Engineering.",
-            institution: "Canadian University of Bangladesh",
-            year: "2023 - 2026"
-        },
-        {
-            degree: "Diploma in Computer Engineering.",
-            institution: "Thakurgaon Polytechnic Institute",
-            year: "2017 - 2021"
-        }
-    ];
 
-    const experience = [
-        {
-            position: "Software Engineer",
-            company: "Binary Fusion",
-            year: "2023 - Present"
-        },
-        // {
-        //     position: "Frontend Developer",
-        //     company: "Vaid Tech Services (Intern)",
-        //     year: "2021 - 2022"
-        // }
-    ];
 
     const scrollToContact = () => {
         const contactSection = document.getElementById('contact');
@@ -99,7 +76,7 @@ const About = () => {
                             {experience.map((exp, i) => (
                                 <div key={i} className="education-card experience-card">
                                     <div className="education-icon experience-icon">
-                                        <FontAwesomeIcon  icon={faBriefcase} />
+                                        <FontAwesomeIcon icon={faBriefcase} />
                                     </div>
                                     <div className="education-content">
                                         <h4 className="education-degree">{exp.position}</h4>

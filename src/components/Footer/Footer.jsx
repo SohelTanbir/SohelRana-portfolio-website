@@ -2,15 +2,12 @@ import React from "react";
 import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebookF,
-  faTwitter,
-  faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons";
-import {
   faPhone,
   faEnvelope,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import { Blogs, CoreTechnologies, personalInfo } from "../../Data/Data";
+import Social from "../Social/Social";
 
 const Footer = () => {
   return (
@@ -19,30 +16,28 @@ const Footer = () => {
         <div className="footer-row">
           <div className="footer-col footer-about">
             <h3>About Me</h3>
-            <p>
-              I am a passionate MERN Stack Developer specializing in building
-              modern web applications. I love creating elegant solutions and
-              bringing ideas to life through code.
-            </p>
+            <p>{personalInfo.aboutMeShort}</p>
           </div>
 
           <div className="footer-col footer-stack">
-            <h4>Tech Stack</h4>
+            <h4>Core Skills</h4>
             <ul>
-              <li>MERN Stack</li>
-              <li>React / Next.js</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>MongoDB</li>
+              {CoreTechnologies.map((tech, index) => (
+                <li key={index}>{tech}</li>
+              ))}
             </ul>
           </div>
 
           <div className="footer-col footer-blogs">
             <h4>Latest Blogs</h4>
             <ul>
-              <li>Why I Switched to Sketch For UI Design</li>
-              <li>Best Practices for Animated Progress Indicators</li>
-              <li>Designing the Perfect Feature Comparison Table</li>
+              {Blogs.map((blog) => (
+                <li key={blog.id}>
+                  <a href={blog.link} target="_blank" rel="noreferrer">
+                    {blog.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -50,16 +45,20 @@ const Footer = () => {
             <h4>Contact</h4>
             <ul className="contact-list">
               <li>
-                <FontAwesomeIcon icon={faPhone} />
-                <span>+44 012 34 5678</span>
+                <a href={`tel:${personalInfo.phone}`}>
+                  <FontAwesomeIcon icon={faPhone} />
+                  <span>{personalInfo.phone}</span>
+                </a>
               </li>
               <li>
-                <FontAwesomeIcon icon={faEnvelope} />
-                <span>closerpage@email.com</span>
+                <a href={`mailto:${personalInfo.email}`}>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  <span>{personalInfo.email}</span>
+                </a>
               </li>
               <li>
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
-                <span>12 Hilton St, Manchester M1 1JF</span>
+                <span>{personalInfo.location}</span>
               </li>
             </ul>
           </div>
@@ -68,34 +67,9 @@ const Footer = () => {
         <div className="footer-divider" />
 
         <div className="footer-bottom">
-          <div className="socials">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="facebook"
-            >
-              <FontAwesomeIcon icon={faFacebookF} />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="twitter"
-            >
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="linkedin"
-            >
-              <FontAwesomeIcon icon={faLinkedinIn} />
-            </a>
-          </div>
+          <Social />
           <div className="copyright">
-            © 2025 All Rights Reserved by SOHEL RANA
+            All Rights Reserved by SOHEL RANA © {new Date().getFullYear()}
           </div>
         </div>
       </div>

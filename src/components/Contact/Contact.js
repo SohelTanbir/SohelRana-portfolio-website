@@ -2,6 +2,7 @@ import React from 'react';
 import './Contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { personalInfo } from '../../Data/Data';
 
 
 const Contact = () => {
@@ -22,7 +23,7 @@ const Contact = () => {
               </div>
               <div className="contact-info-text">
                 <span className="contact-info-label">Phone</span>
-                <span className="contact-info-value">+123 456 7890</span>
+                <span className="contact-info-value">{personalInfo.phone}</span>
               </div>
             </div>
 
@@ -32,7 +33,7 @@ const Contact = () => {
               </div>
               <div className="contact-info-text">
                 <span className="contact-info-label">Email</span>
-                <span className="contact-info-value">example@gmail.com</span>
+                <span className="contact-info-value">{personalInfo.email}</span>
               </div>
             </div>
 
@@ -42,7 +43,7 @@ const Contact = () => {
               </div>
               <div className="contact-info-text">
                 <span className="contact-info-label">Location</span>
-                <span className="contact-info-value">Hong Kong, China</span>
+                <span className="contact-info-value">{personalInfo.location}</span>
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@ import gellary from '../images/portfolio/gellary.png'
 
 
 
-
+// portfolio data
 const portfolio_demo = [
     {
         id: 1,
@@ -147,3 +147,80 @@ const portfolio_demo = [
 ]
 
 export default portfolio_demo;
+
+// education information
+export const education = [
+    {
+        degree: "BSc in Computer Science and Engineering.",
+        institution: "Canadian University of Bangladesh",
+        year: "2023 - 2026"
+    },
+    {
+        degree: "Diploma in Computer Engineering.",
+        institution: "Thakurgaon Polytechnic Institute",
+        year: "2017 - 2021"
+    }
+];
+
+// work experience
+export const experience = [
+    {
+        position: "Software Engineer",
+        company: "Binary Fusion",
+        year: "2023 - Present"
+    },
+    // {
+    //     position: "Frontend Developer",
+    //     company: "Vaid Tech Services (Intern)",
+    //     year: "2021 - 2022"
+    // }
+];
+
+// contact information
+export const personalInfo = {
+    name: "Sohel Rana",
+    phone: "+8801774232515",
+    email: "soheltanbir19@gmail.com",
+    location: "Dhaka, Bangladesh",
+    facebook: "https://www.facebook.com",
+    linkedin: "https://www.linkedin.com/in/sohelrana515",
+    github: "https://github.com/SohelTanbir",
+    twitter: "https://twitter.com/soheltanbir",
+    aboutMe: `I’m Sohel Rana, a MERN Stack Developer specializing in scalable, high-performance web applications using React, Next.js, Node.js, and MongoDB.
+With strong skills in Redux Toolkit, RTK Query, and Framer Motion, I build clean, responsive, and engaging user experiences that perform flawlessly across platforms.`,
+    aboutMeShort: `MERN Stack Developer crafting scalable, high-performance web apps with React, Next.js, Node.js, and MongoDB, focused on clean code, smooth UI, and great user experiences.`
+}
+
+// tech stack
+export const CoreTechnologies = [
+    "Tailwind CSS",
+    "React, Next.js",
+    "Redux Toolkit",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+];
+
+export const Blogs = [
+    {
+        id: 1,
+        title: "প্রম্পট ইঞ্জিনিয়ারিং: Ai কে বোঝানোর সহজ কৌশল",
+        date: "Sep 12, 2025",
+        link: "https://sohelrana.hashnode.dev",
+        thumbnail: '/assets/blogs/prompt-engineering.png',
+    },
+    {
+        id: 2,
+        title: "সিনক্রোনাস ও অ্যাসিনক্রোনাস প্রোগ্রামিং ইন জাভাস্ক্রিপ্ট।",
+        date: "Oct 19, 2024",
+        link: "https://synchronous-asynchronous.hashnode.dev",
+        thumbnail: '/assets/blogs/synchronous-asynchronous.png',
+    },
+    {
+        id: 3,
+        title: "এক পলকে Git stash",
+        date: "Dec 28, 2024",
+        link: "https://git-stash.hashnode.dev/",
+        thumbnail: '/assets/blogs/git-stash-cover.png',
+    },
+]

@@ -51,13 +51,16 @@
   left: 0;
   color: #ff4757;
 }
-
+.footer-stack ul li:hover {
+  color: #fff;
+  transition: color 0.3s ease;
+}
 /* Latest Blogs Column */
 .footer-blogs ul {
   list-style: none;
   padding: 0;
 }
-.footer-blogs ul li {
+.footer-blogs ul li a {
   color: #9aa3b2;
   margin-bottom: 1.2rem;
   font-size: 1.4rem;
@@ -65,8 +68,9 @@
   cursor: pointer;
   transition: color 0.3s ease;
 }
-.footer-blogs ul li:hover {
+.footer-blogs ul li:hover a {
   color: #fff;
+  text-decoration: underline;
 }
 
 /* Contact Column */
@@ -74,7 +78,7 @@
   list-style: none;
   padding: 0;
 }
-.footer-contact .contact-list li {
+.footer-contact .contact-list li a {
   display: flex;
   align-items: flex-start;
   gap: 1.2rem;
@@ -83,6 +87,20 @@
   font-size: 1.5rem;
   line-height: 1.6;
 }
+.footer-contact .contact-list li:last-child {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+.footer-contact .contact-list li:hover a,
+.footer-contact .contact-list li:hover span,
+.footer-contact .contact-list li:hover svg {
+  color: #fff;
+  fill: #fff;
+  transition: fill 0.3s ease;
+  transition: color 0.3s ease;
+}
+
 .footer-contact .contact-list li svg {
   color: #ff4757;
   font-size: 1.6rem;
