@@ -53,14 +53,14 @@
 .education-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.4rem;
 }
 
 .education-card {
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1.6rem 1.4rem;
   display: flex;
   gap: 1.5rem;
   transition: all 0.3s ease;
@@ -74,14 +74,14 @@
 }
 
 .education-icon {
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
   background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
   border-radius: 12px;
   display: grid;
   place-items: center;
   color: white;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   flex-shrink: 0;
 }
 
@@ -133,7 +133,7 @@
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
+  gap: 1.6rem;
 }
 
 .tool-card {
@@ -141,7 +141,7 @@
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   padding: 1.4rem 1rem;
-  min-height: 90px;
+  min-height: 105px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,12 +164,11 @@
 }
 
 .tool-name {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 600;
   color: #1f2937;
   font-family: "Inter", sans-serif;
 }
-
 /* Contact Me Button - Centered */
 .about-cta {
   display: flex;
@@ -265,11 +264,12 @@
 
   .tool-card {
     padding: 1.2rem 0.8rem;
-    min-height: 75px;
+    min-height: 90px;
+    gap: 1.4rem;
   }
 
   .education-card {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 
   .contact-me-btn {
