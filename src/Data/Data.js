@@ -1,27 +1,9 @@
-import appri from '../images/portfolio/appri.png'
-import quranImg from '../images/portfolio/al-quran.png'
-import estoreImg from '../images/portfolio/estore.png'
-import developerImg from '../images/portfolio/developer-cmmunity -large.png'
-import textEditor from '../images/portfolio/text-editor.png'
-import mobileCare from '../images/portfolio/mobileCare-large.png'
-import travelImg from '../images/portfolio/travel-agency -large.png'
-import finix from '../images/portfolio/finix.png'
-import newBiz from '../images/portfolio/nebize.png'
-import noxia from '../images/portfolio/noxia.png'
-import colorPicker from '../images/portfolio/color-picker.png'
-import freelancer from '../images/portfolio/freelancer1.jpg'
-import slider from '../images/portfolio/slider-demo.png'
-import gellary from '../images/portfolio/gellary.png'
-
-
-
-
 // portfolio data
 const portfolio_demo = [
     {
         id: 1,
         title: 'Appri App Landing page',
-        img: appri,
+        img: '/assets/images/portfolio/appri.png',
         description: 'Appri is a app landing page.it is  a full responsive website Templete.To make it I used only HTML and CSS',
         category: 'App',
         code_link: 'https://github.com/SohelTanbir/Appri-App-landing-page',
@@ -30,7 +12,7 @@ const portfolio_demo = [
     {
         id: 2,
         title: 'Al Quran App',
-        img: quranImg,
+        img: '/assets/images/portfolio/al-quran.png',
         description: 'Al Quran web application for muslim people.This is a amazing application with three mode to use it.I use React js for Front and use Free API for Back end',
         category: 'App',
         code_link: 'https://github.com/SohelTanbir/Vaid-tech/tree/Al-Quran',
@@ -39,7 +21,7 @@ const portfolio_demo = [
     {
         id: 3,
         title: 'E-Store ',
-        img: estoreImg,
+        img: '/assets/images/portfolio/estore.png',
         description: "E-Store is an E-commerce Website.customer can buy their cloth from the website.To make it I used Only HTML and CSS",
         category: 'Web',
         code_link: 'https://github.com/SohelTanbir/E-Store',
@@ -48,7 +30,7 @@ const portfolio_demo = [
     {
         id: 4,
         title: 'Color Picker App',
-        img: colorPicker,
+        img: '/assets/images/portfolio/color-picker.png',
         description: "This is a simple color picker app. user can pick up any from the application with hex or rgb color code.",
         category: 'App',
         code_link: "https://github.com/SohelTanbir/Color-Picker-App",
@@ -57,7 +39,7 @@ const portfolio_demo = [
     {
         id: 5,
         title: 'Developer Community',
-        img: developerImg,
+        img: '/assets/images/portfolio/developer-cmmunity -large.png',
         description: "Developer Community is a blog Single page Application. I used React js For Front end",
         category: 'Web',
         code_link: "https://github.com/SohelTanbir/developers-community",
@@ -66,7 +48,7 @@ const portfolio_demo = [
     {
         id: 6,
         title: 'Simple Text Editor',
-        img: textEditor,
+        img: '/assets/images/portfolio/text-editor.png',
         description: 'This is a Simple WYSIWYG Text Editor. I used HTML, CSS and JavaScript for the project',
         category: 'App',
         code_link: 'https://github.com/SohelTanbir/Vaid-tech/tree/text-editor',
@@ -75,7 +57,7 @@ const portfolio_demo = [
     {
         id: 7,
         title: 'Mobile Repire IT',
-        img: mobileCare,
+        img: '/assets/images/portfolio/mobileCare-large.png',
         description: 'This is a Full stack single page web application with Dashboard.I used to make it React js, Node js, Express js, MongoDB and firebase.customer can repair their mobile phone by perches repair package from the application.',
         category: 'Web',
         code_link: 'https://github.com/SohelTanbir/mobileCare',
@@ -84,7 +66,7 @@ const portfolio_demo = [
     {
         id: 8,
         title: 'Travel Agency',
-        img: travelImg,
+        img: '/assets/images/portfolio/travel-agency -large.png',
         description: "Travel agency is onlne Ticket Booking application.pasanger can buy ticket from the application and can see destination by google map.it's made by React js, firebase Authentication",
         category: 'Web',
         code_link: 'https://github.com/SohelTanbir/Travel-agency-with-authentication',
@@ -93,7 +75,7 @@ const portfolio_demo = [
     {
         id: 9,
         title: 'Finix Web Template ',
-        img: finix,
+        img: '/assets/images/portfolio/finix.png',
         description: "Finix is beautiful get appoint web Template .To make it I used only HTML and CSS",
         category: 'Web Design',
         code_link: 'https://github.com/SohelTanbir/Finix',
@@ -102,7 +84,7 @@ const portfolio_demo = [
     {
         id: 10,
         title: 'NewBiz Template ',
-        img: newBiz,
+        img: '/assets/images/portfolio/nebize.png',
         description: "NewBiz is beautiful Business solution web Template .To make it I used only HTML and CSS",
         category: 'Web Design',
         code_link: 'https://github.com/SohelTanbir/NewBiz-webiste',
@@ -111,7 +93,7 @@ const portfolio_demo = [
     {
         id: 11,
         title: 'Noxia Web Template',
-        img: noxia,
+        img: '/assets/images/portfolio/noxia.png',
         description: "Noxia is Service provided website, .To make it I used only HTML and CSS",
         category: 'Web Design',
         code_link: 'https://github.com/SohelTanbir/Noxia-website',
@@ -120,7 +102,7 @@ const portfolio_demo = [
     {
         id: 12,
         title: 'Freelancer Marketplace App',
-        img: freelancer,
+        img: '/assets/images/portfolio/freelancer1.jpg',
         description: "This is a Marketplace Web Application for Freelancer with few functionalities.",
         category: 'Web',
         code_link: "https://github.com/SohelTanbir/FreelanceBD-marketplace",
@@ -129,7 +111,7 @@ const portfolio_demo = [
     {
         id: 13,
         title: 'Image Slider',
-        img: slider,
+        img: '/assets/images/portfolio/slider-demo.png',
         description: "This is a simle image slider. I only use vanila javascript to make the project. no third party plugins.",
         category: 'Design',
         code_link: "https://github.com/SohelTanbir/Vaid-tech/tree/slider-js",
@@ -138,7 +120,7 @@ const portfolio_demo = [
     {
         id: 14,
         title: 'Image Gellary ',
-        img: gellary,
+        img: '/assets/images/portfolio/gellary.png',
         description: "This is a simle image Gellary. I only use vanila javascript to make the project",
         category: 'Graphic',
         code_link: "https://github.com/SohelTanbir/Vaid-tech/tree/gallery-with-animation",
