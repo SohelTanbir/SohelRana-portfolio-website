@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./GitHubStats.css";
 import { FaGithub, FaCodeBranch, FaStar, FaUsers } from "react-icons/fa";
+import { useCountUp } from "../../Hooks/useCountUp";
 
 const GitHubStats = () => {
   const githubUsername = process.env.REACT_APP_GITHUB_USERNAME;
@@ -17,6 +18,12 @@ const GitHubStats = () => {
     currentYear: new Date().getFullYear(),
   });
   const [loading, setLoading] = useState(true);
+
+  // Counter animations
+  const contributionsCount = useCountUp(githubData.totalContributions, 3000);
+  const followersCount = useCountUp(githubData.followers, 3000);
+  const starsCount = useCountUp(githubData.totalStars, 3000);
+  const reposCount = useCountUp(githubData.publicRepos, 3000);
 
   useEffect(() => {
     const fetchGitHubStats = async () => {
@@ -82,33 +89,32 @@ const GitHubStats = () => {
     {
       icon: <FaCodeBranch />,
       label: "Total Contributions",
-      value: loading ? "..." : githubData.totalContributions.toLocaleString(),
+      value: loading ? "..." : contributionsCount.toLocaleString(),
       year: githubData.currentYear.toString(),
       gradient: "linear-gradient(135deg, #2d3e52 0%, #364559 100%)",
     },
     {
       icon: <FaUsers />,
       label: "Followers",
-      value: loading ? "..." : githubData.followers.toString(),
+      value: loading ? "..." : followersCount.toString(),
       unit: "",
       gradient: "linear-gradient(135deg, #3d4e62 0%, #4a5869 100%)",
     },
     {
       icon: <FaStar />,
       label: "Total Stars",
-      value: loading ? "..." : githubData.totalStars.toString(),
+      value: loading ? "..." : starsCount.toString(),
       unit: "",
       gradient: "linear-gradient(135deg, #35495e 0%, #3e5366 100%)",
     },
     {
       icon: <FaGithub />,
       label: "Public Repos",
-      value: loading ? "..." : githubData.publicRepos.toString(),
+      value: loading ? "..." : reposCount.toString(),
       unit: "",
       gradient: "linear-gradient(135deg, #3a4c5f 0%, #455668 100%)",
     },
   ];
-  console.log("githubData", githubData);
 
   return (
     <section className="github-stats" id="github-stats">
