@@ -1,11 +1,133 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope, faMapMarkerAlt, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { personalInfo } from '../../Data/Data';
+import emailjs from '@emailjs/browser';
 
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  // Validate form
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Name validation
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = 'Name must be at least 2 characters';
+    }
+
+    // Email validation
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    // Message validation
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters';
+    }
+
+    // Phone is optional, but validate if provided
+    if (formData.phone.trim() && !/^[0-9+\-\s()]+$/.test(formData.phone)) {
+      newErrors.phone = 'Please enter a valid phone number';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validate form
+    if (!validateForm()) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please fix the errors above'
+      });
+      return;
+    }
+
+    setLoading(true);
+    setSubmitStatus({ type: '', message: '' });
+
+    try {
+      // EmailJS configuration from environment variables
+      const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone || 'Not provided',
+          message: formData.message,
+          to_name: 'Sohel Rana',
+        },
+        publicKey
+      );
+
+      setSubmitStatus({
+        type: 'success',
+        message: 'Thank you! Your message has been sent successfully. I will get back to you soon.'
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Oops! Something went wrong. Please try again later or email me directly.'
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div id="contact">
       <div className="container">
@@ -50,30 +172,84 @@ const Contact = () => {
 
           {/* Right: Contact Form */}
           <div className="contact-form-column">
-            <form className="contact-form">
+            <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-col-50">
-                  <input type="text" placeholder="Name" />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name *"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className={errors.name ? 'error' : ''}
+                    disabled={loading}
+                  />
+                  {errors.name && <span className="error-message">{errors.name}</span>}
                 </div>
                 <div className="form-col-50">
-                  <input type="email" placeholder="Email" />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email *"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={errors.email ? 'error' : ''}
+                    disabled={loading}
+                  />
+                  {errors.email && <span className="error-message">{errors.email}</span>}
                 </div>
               </div>
 
               <div className="form-row">
                 <div className="form-col-100">
-                  <input type="text" placeholder="Phone (Optional)" />
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Phone (Optional)"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className={errors.phone ? 'error' : ''}
+                    disabled={loading}
+                  />
+                  {errors.phone && <span className="error-message">{errors.phone}</span>}
                 </div>
               </div>
 
               <div className="form-row">
                 <div className="form-col-100">
-                  <textarea placeholder="Message"></textarea>
+                  <textarea
+                    name="message"
+                    placeholder="Message *"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className={errors.message ? 'error' : ''}
+                    disabled={loading}
+                  ></textarea>
+                  {errors.message && <span className="error-message">{errors.message}</span>}
                 </div>
               </div>
+
+              {/* Status Message */}
+              {submitStatus.message && (
+                <div className={`status-message ${submitStatus.type}`}>
+                  {submitStatus.message}
+                </div>
+              )}
 
               <div className="form-submit">
-                <button type="submit" className="submit-btn">Send Message</button>
+                <button
+                  type="submit"
+                  className="submit-btn"
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <>
+                      <FontAwesomeIcon icon={faSpinner} spin /> Sending...
+                    </>
+                  ) : (
+                    'Send Message'
+                  )}
+                </button>
               </div>
             </form>
           </div>
