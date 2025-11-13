@@ -10,7 +10,7 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['home', 'about', 'skills', 'projects', 'blog', 'contact'];
+            const sections = ['home', 'about', 'github-stats', 'projects', 'blog', 'contact'];
             const scrollPosition = window.scrollY + 100;
 
             for (const sectionId of sections) {
@@ -79,8 +79,8 @@ const Header = () => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#skills" className={`nav-btn ${activeSection === 'skills' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('skills'); }}>
-                                        <FontAwesomeIcon icon={faCode} /> Resume
+                                    <a href="#github-stats" className={`nav-btn ${activeSection === 'github-stats' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('github-stats'); }}>
+                                        <FontAwesomeIcon icon={faCode} /> GitHub
                                     </a>
                                 </li>
                                 <li>

@@ -104,7 +104,7 @@ const About = () => {
 
                     {/* RIGHT: Technologies */}
                     <div className="about-right">
-                        <h3 className="subsection-title">Core Technologies</h3>
+                        <h3 className="subsection-title">Core Skills</h3>
                         <div className="tools-grid">
                             {tools.map((tool, i) => (
                                 <div
