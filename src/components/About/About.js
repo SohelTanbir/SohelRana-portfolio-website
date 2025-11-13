@@ -2,10 +2,6 @@ import React from "react";
 import "./About.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faBirthdayCake,
-    faEnvelope,
-    faMapMarkerAlt,
-    faPhone,
     faGraduationCap,
     faCalendarAlt,
     faBriefcase,
@@ -62,8 +58,8 @@ const About = () => {
                 <div className="section-header">
                     <h2 className="section-title">About Me</h2>
                     <p className="section-lead">
-                        I craft fast, accessible, and maintainable products with React, Next.js, Tailwind, and Shopify Polaris —
-                        turning complex ideas into elegant, scalable interfaces.
+                        I’m Sohel Rana, a MERN Stack Developer specializing in scalable, high-performance web applications using React, Next.js, Node.js, and MongoDB.
+                        With strong skills in Redux Toolkit and  RTK Query. I build clean, responsive, and reusable interfaces that deliver seamless user experiences.
                     </p>
                 </div>
 
