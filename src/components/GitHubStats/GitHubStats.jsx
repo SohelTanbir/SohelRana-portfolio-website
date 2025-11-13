@@ -3,7 +3,12 @@ import "./GitHubStats.css";
 import { FaGithub, FaCodeBranch, FaStar, FaUsers } from "react-icons/fa";
 
 const GitHubStats = () => {
-  const githubUsername = "SohelTanbir"; // Your GitHub username
+  const githubUsername = process.env.REACT_APP_GITHUB_USERNAME;
+  const githubApiUrl = process.env.REACT_APP_GITHUB_API_URL;
+  const contributionsApiUrl =
+    process.env.REACT_APP_GITHUB_CONTRIBUTIONS_API_URL;
+  const githubChartUrl = process.env.REACT_APP_GITHUB_CHART_URL;
+
   const [githubData, setGithubData] = useState({
     totalStars: 0,
     publicRepos: 0,
@@ -17,9 +22,7 @@ const GitHubStats = () => {
     const fetchGitHubStats = async () => {
       try {
         // Fetch user data
-        const userRes = await fetch(
-          `https://api.github.com/users/${githubUsername}`
-        );
+        const userRes = await fetch(`${githubApiUrl}/users/${githubUsername}`);
         const userData = await userRes.json();
 
         // Fetch ALL repositories (handle pagination)
@@ -29,7 +32,7 @@ const GitHubStats = () => {
 
         while (hasMoreRepos) {
           const reposRes = await fetch(
-            `https://api.github.com/users/${githubUsername}/repos?per_page=100&page=${page}`
+            `${githubApiUrl}/users/${githubUsername}/repos?per_page=100&page=${page}`
           );
           const reposData = await reposRes.json();
 
@@ -50,7 +53,7 @@ const GitHubStats = () => {
         // Fetch contribution data using GitHub's contribution API
         const currentYear = new Date().getFullYear();
         const contributionRes = await fetch(
-          `https://github-contributions-api.jogruber.de/v4/${githubUsername}?y=${currentYear}`
+          `${contributionsApiUrl}/${githubUsername}?y=${currentYear}`
         );
         const contributionData = await contributionRes.json();
 
@@ -147,7 +150,7 @@ const GitHubStats = () => {
           </h3>
           <div className="graph-wrapper">
             <img
-              src={`https://ghchart.rshah.org/${githubUsername}`}
+              src={`${githubChartUrl}/${githubUsername}`}
               alt="GitHub Contribution Chart"
               className="github-chart"
             />
