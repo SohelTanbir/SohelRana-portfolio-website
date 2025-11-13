@@ -168,7 +168,8 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/sohelrana515",
     github: "https://github.com/SohelTanbir",
     twitter: "https://twitter.com/soheltanbir",
-    aboutMe: `I’m Sohel Rana, a MERN Stack Developer specializing in scalable, high-performance web applications using React, Next.js, Node.js, and MongoDB.
+    resume: 'https://drive.google.com/uc?export=download&id=1ne7uoblzsLEEGBKT-PnpDlDwX_tnM7T5',
+    aboutMe: `I'm Sohel Rana, a MERN Stack Developer specializing in scalable, high-performance web applications using React, Next.js, Node.js, and MongoDB.
 With strong skills in Redux Toolkit, RTK Query, and Framer Motion, I build clean, responsive, and engaging user experiences that perform flawlessly across platforms.`,
     aboutMeShort: `MERN Stack Developer crafting scalable, high-performance web apps with React, Next.js, Node.js, and MongoDB, focused on clean code, smooth UI, and great user experiences.`
 }

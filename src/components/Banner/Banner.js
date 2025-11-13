@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import TypedText from '../TypedText/TypedText';
+import { personalInfo } from '../../Data/Data';
 
 const Banner = () => {
     return (
@@ -16,25 +17,29 @@ const Banner = () => {
                         </div>
                     </div>
 
-                    <h1 className="profile-name">Sohel Rana</h1>
+                    <h1 className="profile-name">{personalInfo.name}</h1>
                     <TypedText />
 
                     <div className="social-links">
-                        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="social-icon facebook">
+                        <a href={personalInfo.facebook} target="_blank" rel="noreferrer" className="social-icon facebook">
                             <FontAwesomeIcon icon={faFacebookF} />
                         </a>
-                        <a href="https://twitter.com/MdSohel75691976" target="_blank" rel="noreferrer" className="social-icon twitter">
+                        <a href={personalInfo.twitter} target="_blank" rel="noreferrer" className="social-icon twitter">
                             <FontAwesomeIcon icon={faTwitter} />
                         </a>
-                        <a href="https://github.com/SohelTanbir" target="_blank" rel="noreferrer" className="social-icon instagram">
+                        <a href={personalInfo.github} target="_blank" rel="noreferrer" className="social-icon instagram">
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
-                        <a href="https://www.linkedin.com/in/sohel-rana-b97445200/" target="_blank" rel="noreferrer" className="social-icon linkedin">
+                        <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="social-icon linkedin">
                             <FontAwesomeIcon icon={faLinkedinIn} />
                         </a>
                     </div>
 
-                    <a href="https://drive.google.com/file/d/1FO1wbDbHwJr3J7EHsRdHWBz9IBZNYHRV/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="download-cv-btn">
+                    <a
+                        href={personalInfo.resume}
+                        download="Sohel_Rana_Resume.pdf"
+                        className="download-cv-btn"
+                    >
                         <FontAwesomeIcon icon={faDownload} /> Download CV
                     </a>
                 </div>
