@@ -1,40 +1,111 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./GitHubStats.css";
-import { FaGithub, FaCodeBranch, FaStar, FaFire } from "react-icons/fa";
+import { FaGithub, FaCodeBranch, FaStar, FaUsers } from "react-icons/fa";
 
 const GitHubStats = () => {
   const githubUsername = "SohelTanbir"; // Your GitHub username
+  const [githubData, setGithubData] = useState({
+    totalStars: 0,
+    publicRepos: 0,
+    totalContributions: 0,
+    followers: 0,
+    currentYear: new Date().getFullYear(),
+  });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchGitHubStats = async () => {
+      try {
+        // Fetch user data
+        const userRes = await fetch(
+          `https://api.github.com/users/${githubUsername}`
+        );
+        const userData = await userRes.json();
+
+        // Fetch ALL repositories (handle pagination)
+        let allRepos = [];
+        let page = 1;
+        let hasMoreRepos = true;
+
+        while (hasMoreRepos) {
+          const reposRes = await fetch(
+            `https://api.github.com/users/${githubUsername}/repos?per_page=100&page=${page}`
+          );
+          const reposData = await reposRes.json();
+
+          if (reposData.length === 0) {
+            hasMoreRepos = false;
+          } else {
+            allRepos = [...allRepos, ...reposData];
+            page++;
+          }
+        }
+
+        // Calculate total stars from all repos
+        const totalStars = allRepos.reduce(
+          (acc, repo) => acc + repo.stargazers_count,
+          0
+        );
+
+        // Fetch contribution data using GitHub's contribution API
+        const currentYear = new Date().getFullYear();
+        const contributionRes = await fetch(
+          `https://github-contributions-api.jogruber.de/v4/${githubUsername}?y=${currentYear}`
+        );
+        const contributionData = await contributionRes.json();
+
+        // Calculate total contributions for current year
+        const totalContributions = contributionData.total[currentYear] || 0;
+
+        setGithubData({
+          totalStars: totalStars,
+          publicRepos: userData.public_repos,
+          totalContributions: totalContributions,
+          followers: userData.followers,
+          currentYear: currentYear,
+        });
+
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching GitHub data:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchGitHubStats();
+  }, [githubUsername]);
 
   const stats = [
     {
       icon: <FaCodeBranch />,
       label: "Total Contributions",
-      value: "1,638",
-      year: "2023",
+      value: loading ? "..." : githubData.totalContributions.toLocaleString(),
+      year: githubData.currentYear.toString(),
       gradient: "linear-gradient(135deg, #2d3e52 0%, #364559 100%)",
     },
     {
-      icon: <FaFire />,
-      label: "Current Streak",
-      value: "45",
-      unit: "days",
+      icon: <FaUsers />,
+      label: "Followers",
+      value: loading ? "..." : githubData.followers.toString(),
+      unit: "",
       gradient: "linear-gradient(135deg, #3d4e62 0%, #4a5869 100%)",
     },
     {
       icon: <FaStar />,
       label: "Total Stars",
-      value: "150+",
+      value: loading ? "..." : githubData.totalStars.toString(),
       unit: "",
       gradient: "linear-gradient(135deg, #35495e 0%, #3e5366 100%)",
     },
     {
       icon: <FaGithub />,
       label: "Public Repos",
-      value: "50+",
+      value: loading ? "..." : githubData.publicRepos.toString(),
       unit: "",
       gradient: "linear-gradient(135deg, #3a4c5f 0%, #455668 100%)",
     },
   ];
+  console.log("githubData", githubData);
 
   return (
     <section className="github-stats" id="github-stats">
@@ -72,7 +143,7 @@ const GitHubStats = () => {
         {/* GitHub Contribution Graph */}
         <div className="contribution-graph">
           <h3 className="graph-title">
-            <FaGithub /> Contribution Activity
+            <FaGithub /> Contribution Activity - {githubData.currentYear}
           </h3>
           <div className="graph-wrapper">
             <img
