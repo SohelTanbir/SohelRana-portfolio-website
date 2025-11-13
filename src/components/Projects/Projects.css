@@ -62,11 +62,11 @@
 
 /* Projects row: two columns that take full available width inside container */
 .projects .row {
-  /* use CSS Grid to reliably create two equal columns inside the container */
   display: grid !important;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin: 0;
+  align-items: stretch;
 }
 .project {
   /* each project fills its grid cell */
@@ -113,7 +113,7 @@
 .live-demo {
   position: absolute;
   left: 50%;
-  top: 110px; /* vertically center over the thumbnail (thumbnail height is 220px) */
+  top: 50%; /* vertically center over the thumbnail (thumbnail height is 220px) */
   transform: translate(-50%, -50%);
   display: flex;
   gap: 10px;
@@ -136,6 +136,7 @@
   font-size: 1.4rem;
   box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
   transition: all 0.3s ease;
+  min-width: max-content;
 }
 .live-demo button:hover {
   background: linear-gradient(135deg, #ff3838 0%, #ff5252 100%);
@@ -153,7 +154,7 @@
   z-index: 2;
 }
 .project:hover .project-thumb::after {
-  background: rgba(0, 0, 0, 0.38);
+  background: rgba(0, 0, 0, 0.6);
 }
 .project:hover .live-demo {
   opacity: 1;

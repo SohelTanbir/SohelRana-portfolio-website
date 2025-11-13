@@ -186,7 +186,7 @@ export const CoreTechnologies = [
 export const Blogs = [
     {
         id: 1,
-        title: "প্রম্পট ইঞ্জিনিয়ারিং: AI কে বোঝানোর সহজ কৌশল",
+        title: "প্রম্পট ইঞ্জিনিয়ারিং: AI কে বোঝানোর সহজ কৌশল।",
         date: "Sep 12, 2025",
         link: "https://sohelrana.hashnode.dev",
         thumbnail: '/assets/images/blogs/prompt-engineering.png',
@@ -202,7 +202,7 @@ export const Blogs = [
     },
     {
         id: 3,
-        title: "এক পলকে Git stash",
+        title: "এক পলকে Git stash.",
         date: "Dec 28, 2024",
         link: "https://git-stash.hashnode.dev/",
         thumbnail: '/assets/images/blogs/git stash-cover.webp',
