@@ -30,19 +30,23 @@
   border-radius: 16px;
   text-align: center;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
 }
 
 .stat-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .stat-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
   opacity: 0.9;
+  color: #ffffff;
 }
 
 .stat-value {
@@ -50,6 +54,7 @@
   font-weight: 700;
   margin: 0.5rem 0;
   font-family: "Poppins", sans-serif;
+  color: #ffffff;
 }
 
 .stat-unit {
@@ -60,14 +65,16 @@
 .stat-label {
   font-size: 1.1rem;
   margin: 0.5rem 0;
-  opacity: 0.95;
+  opacity: 0.85;
   font-family: "Inter", sans-serif;
+  color: #ffffff;
 }
 
 .stat-year {
   font-size: 1rem;
-  opacity: 0.85;
+  opacity: 0.75;
   font-style: italic;
+  color: #ffffff;
 }
 
 /* Contribution Graph */
@@ -196,7 +203,6 @@
 
 @media (max-width: 520px) {
   .stats-grid {
-    grid-template-columns: 1fr;
     gap: 1rem;
   }
 

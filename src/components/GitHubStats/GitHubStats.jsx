@@ -11,28 +11,28 @@ const GitHubStats = () => {
       label: "Total Contributions",
       value: "1,638",
       year: "2023",
-      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      gradient: "linear-gradient(135deg, #2d3e52 0%, #364559 100%)",
     },
     {
       icon: <FaFire />,
       label: "Current Streak",
       value: "45",
       unit: "days",
-      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      gradient: "linear-gradient(135deg, #3d4e62 0%, #4a5869 100%)",
     },
     {
       icon: <FaStar />,
       label: "Total Stars",
       value: "150+",
       unit: "",
-      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      gradient: "linear-gradient(135deg, #35495e 0%, #3e5366 100%)",
     },
     {
       icon: <FaGithub />,
       label: "Public Repos",
       value: "50+",
       unit: "",
-      gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+      gradient: "linear-gradient(135deg, #3a4c5f 0%, #455668 100%)",
     },
   ];
 
