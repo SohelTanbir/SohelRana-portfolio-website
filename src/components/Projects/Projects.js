@@ -3,7 +3,7 @@ import './Projects.css';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, } from '@fortawesome/free-brands-svg-icons';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import portfolio_demo from '../../Data/Data';
 import {
   fadeInDirection,
@@ -14,16 +14,22 @@ import {
 const Projects = () => {
   const [allProjects] = useState(portfolio_demo);
   const [projects, setProjects] = useState(portfolio_demo);
-  const [showAll, setShowAll] = useState(9);
+  const [showAll, setShowAll] = useState(6);
   const [activeCategory, setActiveCategory] = useState('All');
+  const [loading, setLoading] = useState(false);
 
   const categories = ['All', 'Web', 'Web Design', 'Mobile App', 'Admin Dashboard'];
-
+  const ITEMS_PER_LOAD = 3;
 
 
   // handle show more
   const handleLoadMore = () => {
-    setShowAll(portfolio_demo.length);
+    setLoading(true);
+    // Simulate loading delay for better UX
+    setTimeout(() => {
+      setShowAll(prev => prev + ITEMS_PER_LOAD);
+      setLoading(false);
+    }, 800);
   }
 
   // handle filter
@@ -31,11 +37,11 @@ const Projects = () => {
     setActiveCategory(category);
     if (category === 'All') {
       setProjects(allProjects);
-      setShowAll(9);
+      setShowAll(6);
     } else {
       const filtered = allProjects.filter(p => p.category === category);
       setProjects(filtered);
-      setShowAll(filtered.length);
+      setShowAll(6);
     }
   }
   return (
@@ -105,7 +111,19 @@ const Projects = () => {
         {
           showAll < projects.length && (
             <div className="load-more-portfolio">
-              <button onClick={handleLoadMore} className="show_more_btn comonBtn">Load more</button>
+              <button
+                onClick={handleLoadMore}
+                className="show_more_btn comonBtn"
+                disabled={loading}
+              >
+                {loading ? (
+                  <>
+                    <FontAwesomeIcon icon={faSpinner} spin /> Loading...
+                  </>
+                ) : (
+                  'Load more'
+                )}
+              </button>
             </div>
           )
         }

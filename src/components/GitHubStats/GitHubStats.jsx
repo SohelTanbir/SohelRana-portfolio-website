@@ -137,8 +137,8 @@ const GitHubStats = () => {
         >
           <h2 className="section-title">Github Contributions</h2>
           <p className="section-lead">
-            My coding journey and open-source contributions showcasing
-            consistent development activity and commitment to learning.
+            Consistent coding activity that reflects my growth, learning, and
+            hands-on experience across personal and professional projects.
           </p>
         </motion.div>
 

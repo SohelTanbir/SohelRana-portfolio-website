@@ -230,7 +230,7 @@ const Contact = () => {
                   <input
                     type="text"
                     name="phone"
-                    placeholder="Phone (Optional)"
+                    placeholder="Phone"
                     value={formData.phone}
                     onChange={handleChange}
                     className={errors.phone ? 'error' : ''}
