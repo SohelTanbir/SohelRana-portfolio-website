@@ -12,7 +12,7 @@ const Projects = () => {
   const [showAll, setShowAll] = useState(9);
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const categories = ['All', 'Web', 'Web Design', 'App', 'Design', 'Graphic'];
+  const categories = ['All', 'Web', 'Web Design', 'Mobile App', 'Admin Dashboard'];
 
 
 

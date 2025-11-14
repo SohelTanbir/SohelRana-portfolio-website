@@ -6,14 +6,18 @@ import {
 } from 'react-router-dom';
 import Header from './components/Header/Header';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Preloader from './components/Preloader/Preloader';
 
 function App() {
    return (
-      <Router>
-         <Header />
-         <Home />
-         <ScrollToTop />
-      </Router>
+      <>
+         <Preloader />
+         <Router>
+            <Header />
+            <Home />
+            <ScrollToTop />
+         </Router>
+      </>
    );
 }
 
