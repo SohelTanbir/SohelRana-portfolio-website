@@ -4,7 +4,6 @@ import "./Preloader.css";
 const Preloader = () => {
   const [loading, setLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
-  const [greeting, setGreeting] = useState("Welcome");
 
   useEffect(() => {
     // Minimum loading time for smooth animation
@@ -42,7 +41,7 @@ const Preloader = () => {
           <div className="circle"></div>
           <div className="circle"></div>
         </div>
-        <h2 className="preloader-greeting">{greeting}!</h2>
+        <h2 className="preloader-greeting">Welcome!</h2>
         <div className="loading-bar">
           <div className="loading-progress"></div>
         </div>
