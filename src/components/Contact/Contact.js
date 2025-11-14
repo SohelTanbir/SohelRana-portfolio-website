@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import './Contact.css'
+import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { personalInfo } from '../../Data/Data';
 import emailjs from '@emailjs/browser';
+import {
+  fadeInDirection,
+  staggerContainer,
+  staggerItem,
+  scrollReveal,
+} from '../../utils/animations';
 
 
 const Contact = () => {
@@ -131,15 +138,27 @@ const Contact = () => {
   return (
     <div id="contact">
       <div className="container">
-        <div className="section-header">
+        <motion.div
+          className="section-header"
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInDirection("up")}
+          {...scrollReveal}
+        >
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-lead">Looking to build something amazing? I design and develop custom web solutions that turn creative ideas into engaging digital realities.</p>
-        </div>
+        </motion.div>
 
         <div className="contact-content">
           {/* Left: Contact Info */}
-          <div className="contact-info-column">
-            <div className="contact-info-card">
+          <motion.div
+            className="contact-info-column"
+            variants={staggerContainer(0.15, 0.2)}
+            initial="hidden"
+            whileInView="visible"
+            {...scrollReveal}
+          >
+            <motion.div className="contact-info-card" variants={staggerItem}>
               <div className="contact-info-icon phone">
                 <FontAwesomeIcon icon={faPhone} />
               </div>
@@ -147,9 +166,9 @@ const Contact = () => {
                 <span className="contact-info-label">Phone</span>
                 <span className="contact-info-value">{personalInfo.phone}</span>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="contact-info-card">
+            <motion.div className="contact-info-card" variants={staggerItem}>
               <div className="contact-info-icon email">
                 <FontAwesomeIcon icon={faEnvelope} />
               </div>
@@ -157,9 +176,9 @@ const Contact = () => {
                 <span className="contact-info-label">Email</span>
                 <span className="contact-info-value">{personalInfo.email}</span>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="contact-info-card">
+            <motion.div className="contact-info-card" variants={staggerItem}>
               <div className="contact-info-icon location">
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
               </div>
@@ -167,11 +186,17 @@ const Contact = () => {
                 <span className="contact-info-label">Location</span>
                 <span className="contact-info-value">{personalInfo.location}</span>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right: Contact Form */}
-          <div className="contact-form-column">
+          <motion.div
+            className="contact-form-column"
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInDirection("right", 0.3)}
+            {...scrollReveal}
+          >
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-col-50">
@@ -252,7 +277,7 @@ const Contact = () => {
                 </button>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

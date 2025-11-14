@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./GitHubStats.css";
+import { motion } from "framer-motion";
 import { FaGithub, FaCodeBranch, FaStar, FaUsers } from "react-icons/fa";
 import { useCountUp } from "../../Hooks/useCountUp";
+import {
+  fadeInDirection,
+  staggerContainer,
+  staggerItem,
+  scrollReveal,
+  hoverScale,
+} from "../../utils/animations";
 
 const GitHubStats = () => {
   const githubUsername = process.env.REACT_APP_GITHUB_USERNAME;
@@ -120,21 +128,35 @@ const GitHubStats = () => {
     <section className="github-stats" id="github-stats">
       <div className="container">
         {/* Section Header */}
-        <div className="section-header">
+        <motion.div
+          className="section-header"
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInDirection("up")}
+          {...scrollReveal}
+        >
           <h2 className="section-title">Github Contributions</h2>
           <p className="section-lead">
             My coding journey and open-source contributions showcasing
             consistent development activity and commitment to learning.
           </p>
-        </div>
+        </motion.div>
 
         {/* Stats Cards */}
-        <div className="stats-grid">
+        <motion.div
+          className="stats-grid"
+          variants={staggerContainer(0.1, 0.2)}
+          initial="hidden"
+          whileInView="visible"
+          {...scrollReveal}
+        >
           {stats.map((stat, index) => (
-            <div
+            <motion.div
               key={index}
               className="stat-card"
               style={{ background: stat.gradient }}
+              variants={staggerItem}
+              whileHover={hoverScale}
             >
               <div className="stat-icon">{stat.icon}</div>
               <div className="stat-content">
@@ -145,12 +167,18 @@ const GitHubStats = () => {
                 <p className="stat-label">{stat.label}</p>
                 {stat.year && <span className="stat-year">in {stat.year}</span>}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* GitHub Contribution Graph */}
-        <div className="contribution-graph">
+        <motion.div
+          className="contribution-graph"
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInDirection("up", 0.4)}
+          {...scrollReveal}
+        >
           <h3 className="graph-title">
             <FaGithub /> Contribution Activity - {githubData.currentYear}
           </h3>
@@ -173,7 +201,7 @@ const GitHubStats = () => {
               <FaGithub /> View Full Profile
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

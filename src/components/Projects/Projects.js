@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import './Projects.css';
+import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import portfolio_demo from '../../Data/Data';
+import {
+  fadeInDirection,
+  hoverScale,
+} from '../../utils/animations';
 
 
 const Projects = () => {
@@ -36,24 +41,44 @@ const Projects = () => {
   return (
     <div className="projects" id="projects">
       <div className="container">
-        <div className="section-header">
+        <motion.div
+          className="section-header"
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInDirection("up")}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <h2 className="section-title">My Recent Works</h2>
           <p className="section-lead">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
-        </div>
-        <div className="filter-bar text-center">
+        </motion.div>
+        <motion.div
+          className="filter-bar text-center"
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInDirection("up", 0.2)}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {categories.map(cat => (
             <button key={cat} onClick={() => handleFilter(cat)} className={`filter-btn ${activeCategory === cat ? 'active' : ''}`}>
               {cat}
             </button>
           ))}
-        </div>
+        </motion.div>
 
         <div className="row">
           {
-            projects?.map(portfolio => {
+            projects?.map((portfolio, index) => {
               if (portfolio.id <= showAll) {
                 return (
-                  <div className="project" key={portfolio.id}>
+                  <motion.div
+                    className="project"
+                    key={portfolio.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.5, delay: (index % 9) * 0.1 }}
+                    whileHover={hoverScale}
+                  >
                     <div className="project-thumb">
                       <img src={portfolio.img} alt={portfolio.title} />
                       <div className="live-demo">
@@ -69,7 +94,7 @@ const Projects = () => {
                       <h3 className="project-title">{portfolio.title}</h3>
                       <p className="project-desc">{portfolio.description}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 )
               }
               return null
@@ -78,7 +103,7 @@ const Projects = () => {
         </div>
 
         {
-          showAll <= 9 && projects.length > showAll && (
+          showAll < projects.length && (
             <div className="load-more-portfolio">
               <button onClick={handleLoadMore} className="show_more_btn comonBtn">Load more</button>
             </div>

@@ -1,11 +1,19 @@
 import React from "react";
 import "./About.css";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faGraduationCap,
     faCalendarAlt,
     faBriefcase,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+    fadeInDirection,
+    staggerContainer,
+    staggerItem,
+    scrollReveal,
+    hoverScale,
+} from "../../utils/animations";
 
 // Brand/dev icons
 import {
@@ -55,22 +63,45 @@ const About = () => {
         <section className="about" id="about" aria-label="About">
             <div className="container">
                 {/* Section Header */}
-                <div className="section-header">
+                <motion.div
+                    className="section-header"
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={fadeInDirection("up")}
+                    {...scrollReveal}
+                >
                     <h2 className="section-title">About Me</h2>
                     <p className="section-lead">
-                        I’m Sohel Rana, a MERN Stack Developer specializing in scalable, high-performance web applications using React, Next.js, Node.js, and MongoDB.
+                        I'm Sohel Rana, a MERN Stack Developer specializing in scalable, high-performance web applications using React, Next.js, Node.js, and MongoDB.
                         With strong skills in Redux Toolkit and  RTK Query. I build clean, responsive, and reusable interfaces that deliver seamless user experiences.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Two Column Layout */}
                 <div className="about-content">
                     {/* LEFT: Education & Experience */}
-                    <div className="about-left">
+                    <motion.div
+                        className="about-left"
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={fadeInDirection("left", 0.2)}
+                        {...scrollReveal}
+                    >
                         <h3 className="subsection-title">Experience & Education</h3>
-                        <div className="education-list">
+                        <motion.div
+                            className="education-list"
+                            variants={staggerContainer(0.15)}
+                            initial="hidden"
+                            whileInView="visible"
+                            {...scrollReveal}
+                        >
                             {experience.map((exp, i) => (
-                                <div key={i} className="education-card experience-card">
+                                <motion.div
+                                    key={i}
+                                    className="education-card experience-card"
+                                    variants={staggerItem}
+                                    whileHover={hoverScale}
+                                >
                                     <div className="education-icon experience-icon">
                                         <FontAwesomeIcon icon={faBriefcase} />
                                     </div>
@@ -82,10 +113,15 @@ const About = () => {
                                             <span>{exp.year}</span>
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))}
                             {education.map((edu, i) => (
-                                <div key={i} className="education-card">
+                                <motion.div
+                                    key={i}
+                                    className="education-card"
+                                    variants={staggerItem}
+                                    whileHover={hoverScale}
+                                >
                                     <div className="education-icon">
                                         <FontAwesomeIcon icon={faGraduationCap} />
                                     </div>
@@ -97,37 +133,57 @@ const About = () => {
                                             <span>{edu.year}</span>
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))}
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
                     {/* RIGHT: Technologies */}
-                    <div className="about-right">
+                    <motion.div
+                        className="about-right"
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={fadeInDirection("right", 0.2)}
+                        {...scrollReveal}
+                    >
                         <h3 className="subsection-title">Core Skills</h3>
-                        <div className="tools-grid">
+                        <motion.div
+                            className="tools-grid"
+                            variants={staggerContainer(0.08)}
+                            initial="hidden"
+                            whileInView="visible"
+                            {...scrollReveal}
+                        >
                             {tools.map((tool, i) => (
-                                <div
+                                <motion.div
                                     key={i}
                                     className="tool-card"
                                     title={tool.name}
                                     style={{ background: tool.gradient }}
+                                    variants={staggerItem}
+                                    whileHover={hoverScale}
                                 >
                                     <div className="tool-icon">{tool.icon}</div>
                                     <span className="tool-name">{tool.name}</span>
-                                </div>
+                                </motion.div>
                             ))}
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
 
                 {/* Contact Me Button - Centered */}
-                <div className="about-cta">
+                <motion.div
+                    className="about-cta"
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={fadeInDirection("up", 0.4)}
+                    {...scrollReveal}
+                >
                     <button className="contact-me-btn" onClick={scrollToContact}>
 
                         Contact Me
                     </button>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

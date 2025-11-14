@@ -1,10 +1,17 @@
 import React from 'react';
 import './Blog.css';
-
+import { motion } from 'framer-motion';
 import img1 from '../../images/portfolio/portfolio-1.png';
 import img2 from '../../images/portfolio/portfolio-2.png';
 import img3 from '../../images/portfolio/portfolio-3.png';
 import { Blogs } from '../../Data/Data';
+import {
+    fadeInDirection,
+    staggerContainer,
+    staggerItem,
+    scrollReveal,
+    hoverScale,
+} from '../../utils/animations';
 
 const posts = [
     {
@@ -40,16 +47,33 @@ const Blog = () => {
     return (
         <section className="blog-section" id="blog">
             <div className="container">
-                <div className="section-header">
+                <motion.div
+                    className="section-header"
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={fadeInDirection("up")}
+                    {...scrollReveal}
+                >
                     <h2 className="section-title">Latest Blogs</h2>
                     <p className="section-lead">
                         Explore my latest blogs, sharing insights, tips, and experiences from the world of web development and modern tech.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="blog-grid">
+                <motion.div
+                    className="blog-grid"
+                    variants={staggerContainer(0.15, 0.2)}
+                    initial="hidden"
+                    whileInView="visible"
+                    {...scrollReveal}
+                >
                     {Blogs.map((blog) => (
-                        <article className="blog-card" key={blog.id}>
+                        <motion.article
+                            className="blog-card"
+                            key={blog.id}
+                            variants={staggerItem}
+                            whileHover={hoverScale}
+                        >
                             <div className="card-media">
                                 <a href={blog.link} target="_blank" rel="noopener noreferrer">
                                     <img src={blog.thumbnail} alt={blog.title} />
@@ -61,9 +85,9 @@ const Blog = () => {
                                 </div>
                                 <a href={blog.link} target="_blank" rel="noopener noreferrer" className="card-title">{blog.title}</a>
                             </div>
-                        </article>
+                        </motion.article>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
