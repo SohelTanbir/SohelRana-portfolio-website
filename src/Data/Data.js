@@ -2,12 +2,78 @@
 const portfolio_demo = [
     {
         id: 1,
+        title: 'MyStore  — MERN eCommerce',
+        img: '/assets/images/portfolio/mystore-ecommerce.png',
+        description: 'A production-level eCommerce system with admin dashboard, role-based authorization, cart, Stripe payment, order tracking, and email notifications.',
+        category: 'development',
+        code_link: 'https://github.com/SohelTanbir/my-store',
+        live_demo: 'https://mystore-ecommerce-app.netlify.app'
+    },
+    {
+        id: 1,
+        title: 'Exotics Aquatics — Full-Featured eCommerce',
+        img: '/assets/images/portfolio/exotics-aquatics.png',
+        description: `A complete eCommerce platform with authentication, order
+tracking, invoice emails, and payment integration (COD & bKash).`,
+        category: 'development',
+        code_link: '#',
+        live_demo: 'https://exoticaquaticsbd.com'
+    },
+    {
+        id: 1,
+        title: 'FusionCart — Multi Vendors Grocery Website',
+        img: '/assets/images/portfolio/fusioncart.png',
+        description: `A multi-vendor grocery web app built with Next.js, Tailwind CSS,
+and Redux Toolkit, optimized for speed and modern UI.
+`,
+        category: 'development',
+        code_link: '#',
+        live_demo: 'https://fusioncart-lime.vercel.app'
+    },
+    {
+        id: 1,
+        title: 'Metrocery — Multi Vendors Admin Dashboard',
+        img: '/assets/images/portfolio/metrocery dashboard.png',
+        description: `A fully responsive multi-vendor grocery admin dashboard developed with HTML, CSS, Bootstrap 5, JavaScript, and jQuery, enhanced with Chart.js visualizations, slick sliders, and dynamic data tables for efficient management.
+`,
+        category: 'dashboard',
+        code_link: '#',
+        live_demo: 'https://metrocery-dashboard-v1.netlify.app'
+    },
+    {
+        id: 1,
+        title: 'Inilabs School Landing page',
+        img: '/assets/images/portfolio/inilabs-landing-page.png',
+        description: 'A fully responsive school landing page built with HTML and Tailwind CSS, featuring optimized layout structure, modern font styling, and a clean UI tailored for educational institutions.',
+        category: 'App',
+        code_link: '#',
+        live_demo: 'https://inilabs-tailwindcss.netlify.app/'
+    },
+    {
+        id: 1,
         title: 'Appri App Landing page',
         img: '/assets/images/portfolio/appri.png',
-        description: 'Appri is a app landing page.it is  a full responsive website Templete.To make it I used only HTML and CSS',
+        description: 'Appri is a app landing page.it is  a full responsive website Template.To make it I used only HTML and CSS',
         category: 'App',
         code_link: 'https://github.com/SohelTanbir/Appri-App-landing-page',
         live_demo: 'https://soheltanbir.github.io/Appri-App-landing-page/'
+    },
+    {
+        id: 2,
+        title: 'Franchise Supplier',
+        img: '/assets/images/portfolio/franchise-supplier.png',
+        description: 'A user-friendly supplier database for franchises, built with HTML, CSS and JavaScript. Includes a clean, responsive UI.',
+        category: 'landingPage',
+        code_link: '#',
+        live_demo: 'https://franchise-supplier.netlify.app'
+    },
+    {
+        id: 2,
+        title: 'Youbie',
+        img: '/assets/images/portfolio/youbie.png   ',
+        description: 'A decentralized, crypto-powered live streaming platform built with React and CSS, featuring uncensored streaming and a sleek UI.',
+        code_link: '#',
+        live_demo: 'https://voluble-narwhal-f6eeed.netlify.app/'
     },
     {
         id: 2,
@@ -35,42 +101,6 @@ const portfolio_demo = [
         category: 'App',
         code_link: "https://github.com/SohelTanbir/Color-Picker-App",
         live_demo: 'https://soheltanbir.github.io/Color-Picker-App/'
-    },
-    {
-        id: 5,
-        title: 'Developer Community',
-        img: '/assets/images/portfolio/developer-cmmunity -large.png',
-        description: "Developer Community is a blog Single page Application. I used React js For Front end",
-        category: 'Web',
-        code_link: "https://github.com/SohelTanbir/developers-community",
-        live_demo: 'https://competent-mccarthy-3eb620.netlify.app/'
-    },
-    {
-        id: 6,
-        title: 'Simple Text Editor',
-        img: '/assets/images/portfolio/text-editor.png',
-        description: 'This is a Simple WYSIWYG Text Editor. I used HTML, CSS and JavaScript for the project',
-        category: 'App',
-        code_link: 'https://github.com/SohelTanbir/Vaid-tech/tree/text-editor',
-        live_demo: 'https://soheltanbir.github.io/Vaid-tech/text-editor.html'
-    },
-    {
-        id: 7,
-        title: 'Mobile Repire IT',
-        img: '/assets/images/portfolio/mobileCare-large.png',
-        description: 'This is a Full stack single page web application with Dashboard.I used to make it React js, Node js, Express js, MongoDB and firebase.customer can repair their mobile phone by perches repair package from the application.',
-        category: 'Web',
-        code_link: 'https://github.com/SohelTanbir/mobileCare',
-        live_demo: 'https://mobile-care-3d874.web.app/"'
-    },
-    {
-        id: 8,
-        title: 'Travel Agency',
-        img: '/assets/images/portfolio/travel-agency -large.png',
-        description: "Travel agency is onlne Ticket Booking application.pasanger can buy ticket from the application and can see destination by google map.it's made by React js, firebase Authentication",
-        category: 'Web',
-        code_link: 'https://github.com/SohelTanbir/Travel-agency-with-authentication',
-        live_demo: 'https://travel-agency-68e4d.web.app/'
     },
     {
         id: 9,
@@ -107,25 +137,7 @@ const portfolio_demo = [
         category: 'Web',
         code_link: "https://github.com/SohelTanbir/FreelanceBD-marketplace",
         live_demo: 'https://soheltanbir.github.io/FreelanceBD-marketplace/'
-    },
-    {
-        id: 13,
-        title: 'Image Slider',
-        img: '/assets/images/portfolio/slider-demo.png',
-        description: "This is a simle image slider. I only use vanila javascript to make the project. no third party plugins.",
-        category: 'Design',
-        code_link: "https://github.com/SohelTanbir/Vaid-tech/tree/slider-js",
-        live_demo: 'https://github.com/SohelTanbir/Vaid-tech/tree/slider-js'
-    },
-    {
-        id: 14,
-        title: 'Image Gellary ',
-        img: '/assets/images/portfolio/gellary.png',
-        description: "This is a simle image Gellary. I only use vanila javascript to make the project",
-        category: 'Graphic',
-        code_link: "https://github.com/SohelTanbir/Vaid-tech/tree/gallery-with-animation",
-        live_demo: 'https://github.com/SohelTanbir/Vaid-tech/tree/gallery-with-animation'
-    },
+    }
 ]
 
 export default portfolio_demo;
