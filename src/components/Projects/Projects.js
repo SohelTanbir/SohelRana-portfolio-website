@@ -18,7 +18,7 @@ const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [loading, setLoading] = useState(false);
 
-  const categories = ['All', 'Web', 'Web Design', 'Mobile App', 'Admin Dashboard'];
+  const categories = ['All', 'Web', 'Web Design', 'Landing Page', 'Admin Dashboard'];
   const ITEMS_PER_LOAD = 3;
 
 
@@ -73,38 +73,33 @@ const Projects = () => {
 
         <div className="row">
           {
-            projects?.map((portfolio, index) => {
-              if (portfolio.id <= showAll) {
-                return (
-                  <motion.div
-                    className="project"
-                    key={portfolio.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.5, delay: (index % 9) * 0.1 }}
-                    whileHover={hoverScale}
-                  >
-                    <div className="project-thumb">
-                      <img src={portfolio.img} alt={portfolio.title} />
-                      <div className="live-demo">
-                        <a href={portfolio.code_link} target="_blank" rel='noreferrer'>
-                          <button>Code link <FontAwesomeIcon icon={faGithub} /></button>
-                        </a>
-                        <a href={portfolio.live_demo} target="_blank" rel='noreferrer'>
-                          <button>Live demo <FontAwesomeIcon icon={faExternalLinkAlt} /></button>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="project-body">
-                      <h3 className="project-title">{portfolio.title}</h3>
-                      <p className="project-desc">{portfolio.description}</p>
-                    </div>
-                  </motion.div>
-                )
-              }
-              return null
-            })
+            projects?.slice(0, showAll).map((portfolio, index) => (
+              <motion.div
+                className="project"
+                key={portfolio.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.5, delay: (index % 6) * 0.1 }}
+                whileHover={hoverScale}
+              >
+                <div className="project-thumb">
+                  <img src={portfolio.img} alt={portfolio.title} />
+                  <div className="live-demo">
+                    <a href={portfolio.code_link} target="_blank" rel='noreferrer'>
+                      <button>Code link <FontAwesomeIcon icon={faGithub} /></button>
+                    </a>
+                    <a href={portfolio.live_demo} target="_blank" rel='noreferrer'>
+                      <button>Live demo <FontAwesomeIcon icon={faExternalLinkAlt} /></button>
+                    </a>
+                  </div>
+                </div>
+                <div className="project-body">
+                  <h3 className="project-title">{portfolio.title}</h3>
+                  <p className="project-desc">{portfolio.description}</p>
+                </div>
+              </motion.div>
+            ))
           }
         </div>
 

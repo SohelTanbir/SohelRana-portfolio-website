@@ -5,105 +5,106 @@ const portfolio_demo = [
         title: 'MyStore  — MERN eCommerce',
         img: '/assets/images/portfolio/mystore-ecommerce.png',
         description: 'A production-level eCommerce system with admin dashboard, role-based authorization, cart, Stripe payment, order tracking, and email notifications.',
-        category: 'development',
+        category: 'Web',
         code_link: 'https://github.com/SohelTanbir/my-store',
         live_demo: 'https://mystore-ecommerce-app.netlify.app'
     },
     {
-        id: 1,
+        id: 2,
         title: 'Exotics Aquatics — Full-Featured eCommerce',
         img: '/assets/images/portfolio/exotics-aquatics.png',
         description: `A complete eCommerce platform with authentication, order
 tracking, invoice emails, and payment integration (COD & bKash).`,
-        category: 'development',
+        category: 'Web',
         code_link: '#',
         live_demo: 'https://exoticaquaticsbd.com'
     },
     {
-        id: 1,
+        id: 3,
         title: 'FusionCart — Multi Vendors Grocery Website',
         img: '/assets/images/portfolio/fusioncart.png',
         description: `A multi-vendor grocery web app built with Next.js, Tailwind CSS,
 and Redux Toolkit, optimized for speed and modern UI.
 `,
-        category: 'development',
+        category: 'Web',
         code_link: '#',
         live_demo: 'https://fusioncart-lime.vercel.app'
     },
     {
-        id: 1,
+        id: 4,
         title: 'Metrocery — Multi Vendors Admin Dashboard',
         img: '/assets/images/portfolio/metrocery dashboard.png',
         description: `A fully responsive multi-vendor grocery admin dashboard developed with HTML, CSS, Bootstrap 5, JavaScript, and jQuery, enhanced with Chart.js visualizations, slick sliders, and dynamic data tables for efficient management.
 `,
-        category: 'dashboard',
+        category: 'Admin Dashboard',
         code_link: '#',
         live_demo: 'https://metrocery-dashboard-v1.netlify.app'
     },
     {
-        id: 1,
+        id: 5,
         title: 'Inilabs School Landing page',
         img: '/assets/images/portfolio/inilabs-landing-page.png',
         description: 'A fully responsive school landing page built with HTML and Tailwind CSS, featuring optimized layout structure, modern font styling, and a clean UI tailored for educational institutions.',
-        category: 'App',
+        category: 'Landing Page',
         code_link: '#',
         live_demo: 'https://inilabs-tailwindcss.netlify.app/'
     },
     {
-        id: 1,
+        id: 6,
         title: 'Appri App Landing page',
         img: '/assets/images/portfolio/appri.png',
         description: 'Appri is a app landing page.it is  a full responsive website Template.To make it I used only HTML and CSS',
-        category: 'App',
+        category: 'Landing Page',
         code_link: 'https://github.com/SohelTanbir/Appri-App-landing-page',
         live_demo: 'https://soheltanbir.github.io/Appri-App-landing-page/'
     },
     {
-        id: 2,
+        id: 7,
         title: 'Franchise Supplier',
         img: '/assets/images/portfolio/franchise-supplier.png',
         description: 'A user-friendly supplier database for franchises, built with HTML, CSS and JavaScript. Includes a clean, responsive UI.',
-        category: 'landingPage',
+        category: 'Landing Page',
         code_link: '#',
         live_demo: 'https://franchise-supplier.netlify.app'
     },
     {
-        id: 2,
+        id: 8,
         title: 'Youbie',
         img: '/assets/images/portfolio/youbie.png   ',
         description: 'A decentralized, crypto-powered live streaming platform built with React and CSS, featuring uncensored streaming and a sleek UI.',
+        category: 'Web',
         code_link: '#',
         live_demo: 'https://voluble-narwhal-f6eeed.netlify.app/'
     },
     {
-        id: 2,
+        id: 9,
         title: 'Al Quran App',
         img: '/assets/images/portfolio/al-quran.png',
         description: 'Al Quran web application for muslim people.This is a amazing application with three mode to use it.I use React js for Front and use Free API for Back end',
-        category: 'App',
+        category: 'Web',
         code_link: 'https://github.com/SohelTanbir/Vaid-tech/tree/Al-Quran',
         live_demo: 'https://melodic-bombolone-809e83.netlify.app/'
     },
     {
-        id: 3,
+        id: 10,
         title: 'E-Store ',
         img: '/assets/images/portfolio/estore.png',
         description: "E-Store is an E-commerce Website.customer can buy their cloth from the website.To make it I used Only HTML and CSS",
-        category: 'Web',
+        category: 'Web Design',
         code_link: 'https://github.com/SohelTanbir/E-Store',
         live_demo: 'https://soheltanbir.github.io/E-Store/index.html'
     },
     {
-        id: 4,
+        id: 11,
         title: 'Color Picker App',
         img: '/assets/images/portfolio/color-picker.png',
         description: "This is a simple color picker app. user can pick up any from the application with hex or rgb color code.",
-        category: 'App',
+        category: 'Web',
         code_link: "https://github.com/SohelTanbir/Color-Picker-App",
         live_demo: 'https://soheltanbir.github.io/Color-Picker-App/'
     },
     {
-        id: 9,
+        id: 12,
         title: 'Finix Web Template ',
         img: '/assets/images/portfolio/finix.png',
         description: "Finix is beautiful get appoint web Template .To make it I used only HTML and CSS",
@@ -112,7 +113,7 @@ and Redux Toolkit, optimized for speed and modern UI.
         live_demo: 'https://soheltanbir.github.io/Finix/index.html'
     },
     {
-        id: 10,
+        id: 13,
         title: 'NewBiz Template ',
         img: '/assets/images/portfolio/nebize.png',
         description: "NewBiz is beautiful Business solution web Template .To make it I used only HTML and CSS",
@@ -121,7 +122,7 @@ and Redux Toolkit, optimized for speed and modern UI.
         live_demo: 'https://soheltanbir.github.io/NewBiz-webiste/'
     },
     {
-        id: 11,
+        id: 14,
         title: 'Noxia Web Template',
         img: '/assets/images/portfolio/noxia.png',
         description: "Noxia is Service provided website, .To make it I used only HTML and CSS",
@@ -130,7 +131,7 @@ and Redux Toolkit, optimized for speed and modern UI.
         live_demo: 'https://soheltanbir.github.io/Noxia-website/'
     },
     {
-        id: 12,
+        id: 15,
         title: 'Freelancer Marketplace App',
         img: '/assets/images/portfolio/freelancer1.jpg',
         description: "This is a Marketplace Web Application for Freelancer with few functionalities.",
@@ -180,7 +181,7 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/sohelrana515",
     github: "https://github.com/SohelTanbir",
     twitter: "https://twitter.com/soheltanbir",
-    resume: 'https://drive.google.com/uc?export=download&id=1ne7uoblzsLEEGBKT-PnpDlDwX_tnM7T5',
+    resume: 'https://drive.google.com/uc?export=download&id=1VeZJ64jGba4gtHn9p2nGudliD2ggrQGL',
     aboutMe: `I'm Sohel Rana, a MERN Stack Developer specializing in scalable, high-performance web applications using React, Next.js, Node.js, and MongoDB.
 With strong skills in Redux Toolkit, RTK Query, and Framer Motion, I build clean, responsive, and engaging user experiences that perform flawlessly across platforms.`,
     aboutMeShort: `MERN Stack Developer crafting scalable, high-performance web apps with React, Next.js, Node.js, and MongoDB, focused on clean code, smooth UI, and great user experiences.`
