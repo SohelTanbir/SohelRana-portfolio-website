@@ -83,7 +83,7 @@ const Contact = () => {
     if (!validateForm()) {
       setSubmitStatus({
         type: 'error',
-        message: 'Please fix the errors above'
+        message: 'Please fill out all required fields correctly.'
       });
       return;
     }

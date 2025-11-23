@@ -83,7 +83,7 @@ and Redux Toolkit, optimized for speed and modern UI.
         description: 'Al Quran web application for muslim people.This is a amazing application with three mode to use it.I use React js for Front and use Free API for Back end',
         category: 'Web',
         code_link: 'https://github.com/SohelTanbir/Vaid-tech/tree/Al-Quran',
-        live_demo: 'https://melodic-bombolone-809e83.netlify.app/'
+        live_demo: 'https://al-quran-mern-app.netlify.app/'
     },
     {
         id: 10,
@@ -130,15 +130,6 @@ and Redux Toolkit, optimized for speed and modern UI.
         code_link: 'https://github.com/SohelTanbir/Noxia-website',
         live_demo: 'https://soheltanbir.github.io/Noxia-website/'
     },
-    {
-        id: 15,
-        title: 'Freelancer Marketplace App',
-        img: '/assets/images/portfolio/freelancer1.jpg',
-        description: "This is a Marketplace Web Application for Freelancer with few functionalities.",
-        category: 'Web',
-        code_link: "https://github.com/SohelTanbir/FreelanceBD-marketplace",
-        live_demo: 'https://soheltanbir.github.io/FreelanceBD-marketplace/'
-    }
 ]
 
 export default portfolio_demo;

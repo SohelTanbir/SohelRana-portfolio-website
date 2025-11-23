@@ -41,7 +41,7 @@ const Preloader = () => {
           <div className="circle"></div>
           <div className="circle"></div>
         </div>
-        <h2 className="preloader-greeting">Welcome!</h2>
+        <h2 className="preloader-greeting">Welcome</h2>
         <div className="loading-bar">
           <div className="loading-progress"></div>
         </div>

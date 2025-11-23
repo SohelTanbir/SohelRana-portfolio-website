@@ -60,6 +60,17 @@
   list-style: none;
   padding: 0;
 }
+.footer-blogs ul li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.footer-blogs ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #ff4757;
+}
 .footer-blogs ul li a {
   color: #9aa3b2;
   margin-bottom: 1.2rem;
