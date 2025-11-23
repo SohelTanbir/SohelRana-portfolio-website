@@ -1,49 +1,57 @@
 import React from 'react';
 import './Banner.css';
-import bannerImage from '../../images/banner/banner-illustration.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faFacebookF, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import TypedText from '../TypedText/TypedText';
-import { Link } from 'react-router-dom';
+import { personalInfo } from '../../Data/Data';
 
 const Banner = () => {
     return (
-        <div className="banner">
-            <div className="container">
-                <div className="row">
-                    <div className="banner-text">
-                        <h1> <span>Hi, I am</span> <br/>Sohel Rana </h1>
-                       <h2> <TypedText/></h2>
-                        <p>My Name is SohelRana. I am a Front-end Web Developer. I have been working with web design and development more than three years. In these three years I have completed many Website Project.</p>
-                        <div className="social-top">
-                            <ul>
-                                <li>
-                                  
-                                    <a href="https://www.linkedin.com/in/sohel-rana-b97445200/" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></a>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/SohelTanbir" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/MdSohel75691976" target="_blank"><FontAwesomeIcon icon={faTwitter} /></a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank"><FontAwesomeIcon icon={faFacebookF} /></a>
-                                </li>
-                               
-                            </ul>
+        <div className="banner" id="home">
+            <div className="banner-container">
+                <div className="banner-content">
+                    <div className="profile-image-wrapper">
+                        <div className="profile-image">
+                            <img src="/assets/images/profile/sohelrana-profile.jpg" alt="Sohel Rana" />
                         </div>
-                        <a href="https://drive.google.com/file/d/1FO1wbDbHwJr3J7EHsRdHWBz9IBZNYHRV/view?usp=sharing"  target="_blank" rel="noopener noreferrer" download>
-                        <button  className="comonBtn">Download CV <FontAwesomeIcon icon={faDownload}/></button>
+                    </div>
+
+                    <h1 className="profile-name">{personalInfo.name}</h1>
+                    <TypedText />
+
+                    <div className="social-links">
+                        <a href={personalInfo.facebook} target="_blank" rel="noreferrer" className="social-icon facebook">
+                            <FontAwesomeIcon icon={faFacebookF} />
                         </a>
-        
-                        <button className="comonBtn">Contact me</button>
+                        <a href={personalInfo.twitter} target="_blank" rel="noreferrer" className="social-icon twitter">
+                            <FontAwesomeIcon icon={faTwitter} />
+                        </a>
+                        <a href={personalInfo.github} target="_blank" rel="noreferrer" className="social-icon instagram">
+                            <FontAwesomeIcon icon={faGithub} />
+                        </a>
+                        <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="social-icon linkedin">
+                            <FontAwesomeIcon icon={faLinkedinIn} />
+                        </a>
                     </div>
-                    <div className="banner-image">
-                        <img src={bannerImage} alt="img"/>
-                    </div>
+
+                    <a
+                        href={personalInfo.resume}
+                        download="Sohel_Rana_Resume.pdf"
+                        className="download-cv-btn"
+                    >
+                        <FontAwesomeIcon icon={faDownload} /> Download CV
+                    </a>
                 </div>
+            </div>
+
+            <div className="decorative-lines">
+                <div className="line line-1"></div>
+                <div className="line line-2"></div>
+                <div className="line line-3"></div>
+                <div className="line line-4"></div>
+                <div className="line line-5"></div>
+                <div className="line line-6"></div>
             </div>
         </div>
     );

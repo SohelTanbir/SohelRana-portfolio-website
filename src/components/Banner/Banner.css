@@ -1,85 +1,375 @@
-.banner{
-    width:100%;
-    padding:1rem 0 6rem;
+.banner {
+  width: 100%;
+  min-height: 95vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url("../../../public/assets/images/banner/sohelrana.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  z-index: 1;
 }
-.banner-text{
-    flex-basis:50%;
+
+.banner-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
-.banner-text h1{
-    color:blueviolet;
-    font-size: 4rem;
+
+.banner-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.banner-text h2{
-    margin-bottom:.5rem;
+
+.profile-image-wrapper {
+  margin-bottom: 2rem;
 }
-.banner-text h1 span{
-    color: crimson;
+
+.profile-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+  padding: 4px;
+  box-shadow: 0 8px 24px rgba(255, 71, 87, 0.2);
 }
-.comonBtn{
-    border:none;
-    outline:none;
-    background: #55178B;
-    color:#fff;
-    padding:.5rem 2rem;
-    font-weight:500;
-    margin-right:1rem;
-    border-radius:.8rem;
-    cursor: pointer;
-    font-size:1.6rem;
-    border: .3rem solid transparent;
-    transition: all .3s ease-in-out;
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fff;
 }
-.comonBtn:hover{
-    color: #55178B;
-    border: .3rem solid #55178B;
-    background: transparent;
+
+.profile-name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
-.banner-text p{
-    font-size:1.8rem;
-    margin-top:1rem;
+
+.profile-title {
+  font-size: 1.8rem;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+  font-weight: 400;
 }
-.banner-image{
-    width:50%;
+
+.social-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
 }
-.banner-image img{
-    height:55rem;
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
-.social-top{
-    margin:3rem 0;
+
+.social-icon.facebook {
+  background: #3b5998;
 }
-.social-top ul{
-    display: flex;
+
+.social-icon.twitter {
+  background: #1da1f2;
 }
-.social-top ul li{
-    margin-left: 2.5rem;
+
+.social-icon.instagram {
+  background: #e1306c;
 }
-.social-top ul li a{
-    padding:.3rem 1rem;
-    display:block;
-    font-size:1.8rem;
-    color:#fff;
-    border-radius: .5rem;
-    transition:all .3s ease-in;
+
+.social-icon.linkedin {
+  background: #0077b5;
 }
-.social-top ul li a i{
-    border-radius: .5rem;
+
+.social-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
-.social-top ul li a:hover{
-    background: crimson;
+
+.download-cv-btn {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
 }
-.social-top ul li:nth-child(1){
-    background-color: #0A66C2;
-    border-radius: .3rem;
+
+.download-cv-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4);
+  background: linear-gradient(135deg, #ff3838 0%, #ff5252 100%);
 }
-.social-top ul li:nth-child(2){
-    background-color: #24292E;
-    border-radius: .3rem;
+
+/* Decorative Lines */
+.decorative-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
 }
-.social-top ul li:nth-child(3){
-    background-color: #1DA1F2;
-    border-radius: .3rem;
+
+.line {
+  position: absolute;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 71, 87, 0.1) 0%,
+    rgba(130, 202, 157, 0.1) 100%
+  );
+  transform-origin: center;
 }
-.social-top ul li:nth-child(4){
-    background-color: #0B86EE;
-    border-radius: .3rem;
+
+.line-1 {
+  width: 300px;
+  height: 2px;
+  top: 10%;
+  left: -50px;
+  transform: rotate(-45deg);
+}
+
+.line-2 {
+  width: 400px;
+  height: 2px;
+  top: 20%;
+  left: -100px;
+  transform: rotate(-45deg);
+}
+
+.line-3 {
+  width: 500px;
+  height: 2px;
+  top: 30%;
+  left: -150px;
+  transform: rotate(-45deg);
+}
+
+.line-4 {
+  width: 300px;
+  height: 2px;
+  bottom: 30%;
+  right: -50px;
+  transform: rotate(-45deg);
+  background: linear-gradient(
+    135deg,
+    rgba(130, 202, 157, 0.1) 0%,
+    rgba(255, 71, 87, 0.1) 100%
+  );
+}
+
+.line-5 {
+  width: 400px;
+  height: 2px;
+  bottom: 20%;
+  right: -100px;
+  transform: rotate(-45deg);
+  background: linear-gradient(
+    135deg,
+    rgba(130, 202, 157, 0.1) 0%,
+    rgba(255, 71, 87, 0.1) 100%
+  );
+}
+
+.line-6 {
+  width: 500px;
+  height: 2px;
+  bottom: 10%;
+  right: -150px;
+  transform: rotate(-45deg);
+  background: linear-gradient(
+    135deg,
+    rgba(130, 202, 157, 0.1) 0%,
+    rgba(255, 71, 87, 0.1) 100%
+  );
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner {
+    min-height: 60vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-name {
+    font-size: 2.5rem;
+  }
+
+  .profile-title {
+    font-size: 1.6rem;
+  }
+
+  .social-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.4rem;
+  }
+
+  .download-cv-btn {
+    font-size: 1.3rem;
+    padding: 0.9rem 2rem;
+  }
+
+  .line {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .profile-name {
+    font-size: 2.2rem;
+  }
+
+  .social-links {
+    gap: 1rem;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Legacy styles - keeping for backward compatibility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.banner-text {
+  flex: 1 1 50%;
+  text-align: left;
+  padding-right: 1.5rem;
+  min-width: 0;
+}
+.banner-text h1 {
+  color: blueviolet;
+  font-size: 4rem;
+}
+.banner-text h2 {
+  margin-bottom: 0.5rem;
+}
+.banner-text h1 span {
+  color: crimson;
+}
+.comonBtn {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+  color: white;
+  border: none;
+  padding: 1.2rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+  font-family: "Poppins", sans-serif;
+}
+.comonBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4);
+  background: linear-gradient(135deg, #ff3838 0%, #ff5252 100%);
+}
+.banner-text p {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+.banner-image {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 1.5rem;
+  min-width: 0;
+}
+.banner-image img {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.social-top {
+  margin: 3rem 0;
+}
+.social-top ul {
+  display: flex;
+}
+.social-top ul li {
+  margin-left: 2.5rem;
+}
+.social-top ul li a {
+  padding: 0.3rem 1rem;
+  display: block;
+  font-size: 1.8rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in;
+}
+.social-top ul li a i {
+  border-radius: 0.5rem;
+}
+.social-top ul li a:hover {
+  background: crimson;
+}
+.social-top ul li:nth-child(1) {
+  background-color: #0a66c2;
+  border-radius: 0.3rem;
+}
+.social-top ul li:nth-child(2) {
+  background-color: #24292e;
+  border-radius: 0.3rem;
+}
+.social-top ul li:nth-child(3) {
+  background-color: #1da1f2;
+  border-radius: 0.3rem;
+}
+.social-top ul li:nth-child(4) {
+  background-color: #0b86ee;
+  border-radius: 0.3rem;
 }

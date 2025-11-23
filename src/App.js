@@ -2,47 +2,33 @@ import './App.css';
 import './css/Responsive.css';
 import Home from './components/Home/Home';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+   BrowserRouter as Router,
 } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import Header from './components/Header/Header';
-import About from './components/About/About'
-import Skills from './components/Skills/Skills';
-import Projects from './components/Projects/Projects';
-import Blog from './components/Blog/Blog';
-import Contact from './components/Contact/Contact';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Preloader from './components/Preloader/Preloader';
 
 function App() {
-  return (
-    <Router>
-      <Header/>
-     <Switch>
-       <Route exact path="/">
-       <Home/>
-       </Route>
-       <Route  path="/home">
-          <Home/>
-       </Route>
-       <Route  path="/about">
-          <About/>
-       </Route>
-       <Route  path="/skills">
-          <Skills/>
-       </Route>
-       <Route  path="/projects">
-          <Projects/>
-       </Route>
-       <Route  path="/blog">
-          <Blog/>
-       </Route>
-       <Route  path="/contact">
-          <Contact/>
-       </Route>
-      
-     </Switch>
-    </Router>
-  );
+   return (
+      <>
+         <Preloader />
+         <Router>
+            <AnimatePresence mode="wait">
+               <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+               >
+                  <Header />
+                  <Home />
+                  <ScrollToTop />
+               </motion.div>
+            </AnimatePresence>
+         </Router>
+      </>
+   );
 }
 
 export default App;

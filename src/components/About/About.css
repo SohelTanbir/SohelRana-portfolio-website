@@ -1,51 +1,276 @@
-.about{
-    padding:8rem 0;
-    background-color: #fbfbfb;
+/* ===== About Section ===== */
+.about {
+  padding: 8rem 0;
+  background: #f8f9fa;
 }
-.about-photo{
-    flex-basis:40%;
+
+/* Section Header - Full Width */
+.about .section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.about-photo img{
-    width:100%;
+
+.about .section-title {
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
 }
-.about-info{
-    text-align: center;
-    flex-basis: 60%;
-    padding:0 2rem;
+.about-left,
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
-.about-info h2{
-    color: blueviolet;
-    font-size:3.5rem;
+.about .section-lead {
+  font-size: 1.7rem;
+  color: #6b7280;
+  line-height: 1.8;
+  font-family: "Inter", sans-serif;
 }
-.comonStyle h4{
-    position: relative;
-    color:crimson;
-    margin-bottom:1rem;
+
+/* Two Column Layout */
+.about-content {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
 }
-.comonStyle h4::before {
-    content: "";
-    position: absolute;
-    left: 35%;
-    top: 50%;
-    width: 5rem;
-    height: 0.2rem;
-    background-color: crimson;
+
+/* Subsection Titles */
+.subsection-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1f2937;
+  font-family: "Poppins", sans-serif;
 }
-.comonStyle h4::after {
-    content: "";
-    position: absolute;
-    right: 35%;
-    top: 50%;
-    width: 5rem;
-    height: 0.2rem;
-    background-color: crimson;
+
+/* LEFT: Education */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
 }
-.about-info p{
-    padding-left:5rem;
-    text-align: justify;
-    margin-bottom:2rem;
+
+.education-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
-.about-info button{
-    float: left!important;
-    margin-left:5rem;
+
+.education-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  border-color: #ff4757;
+}
+
+.education-icon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.education-content {
+  flex: 1;
+}
+
+.education-degree {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+  font-family: "Poppins", sans-serif;
+}
+
+.education-institution {
+  font-size: 1.5rem;
+  color: #6b7280;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  font-family: "Inter", sans-serif;
+}
+
+.education-year {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.4rem;
+  color: #9ca3af;
+  font-family: "Inter", sans-serif;
+}
+
+.education-year svg {
+  color: #ff4757;
+  font-size: 1.3rem;
+}
+
+/* Experience Cards - Inherits all styles from .education-card */
+
+.experience-icon {
+  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%) !important;
+}
+
+/* RIGHT: Technologies */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+}
+
+.tool-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1.4rem 1rem;
+  min-height: 105px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-color: #ff4757;
+}
+
+.tool-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+}
+/* Contact Me Button - Centered */
+.about-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.contact-me-btn {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+  color: white;
+  border: none;
+  padding: 1.2rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-me-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4);
+}
+
+.contact-me-btn:active {
+  transform: translateY(-1px);
+}
+
+.contact-me-btn svg {
+  font-size: 1.8rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-left {
+    order: 2;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 6rem 0;
+  }
+
+  .about .section-title {
+    font-size: 3rem;
+  }
+
+  .about .section-lead {
+    font-size: 1.5rem;
+  }
+
+  .subsection-title {
+    font-size: 1.4rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .about {
+    padding: 5rem 0;
+  }
+
+  .about .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .about .section-title {
+    font-size: 2.5rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .tool-card {
+    padding: 1.2rem 0.8rem;
+    min-height: 90px;
+    gap: 1.4rem;
+  }
+
+  .education-card {
+    padding: 2rem;
+  }
+
+  .contact-me-btn {
+    padding: 1.4rem 3rem;
+    font-size: 1.5rem;
+  }
 }

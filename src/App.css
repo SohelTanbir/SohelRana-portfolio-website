@@ -1,38 +1,86 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-html{
+html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* offset for sticky header */
 }
-body{
-  font-size:1.6rem;
+body {
+  font-size: 1.6rem;
 }
 .row {
-  display: flex;
+  /* Make .row a reliable flex container across the app. Use !important to avoid
+     third-party or component CSS accidentally overriding this global layout rule. */
+  display: flex !important;
   align-items: center;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
+  gap: 1rem;
 }
-.container{
-  max-width:1240px;
-  width:100%;
-  padding:0 15px;
+
+/* Utility column classes (helps components that expect bootstrap-like columns) */
+.col-100 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.col-75 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.col-66 {
+  flex: 0 0 66.6666%;
+  max-width: 66.6666%;
+}
+.col-50 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.col-33 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}
+.col-25 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.col-auto {
+  flex: 0 0 auto;
+  max-width: none;
+}
+
+/* Responsive: on narrow screens make columns full width */
+@media only screen and (max-width: 768px) {
+  .col-100,
+  .col-75,
+  .col-66,
+  .col-50,
+  .col-33,
+  .col-25 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+.container {
+  max-width: 1240px;
+  width: 100%;
+  padding: 0 15px;
   margin: auto;
 }
 a,
-a:hover{
+a:hover {
   text-decoration: none;
 }
-img{
+img {
   max-width: 100%;
 }
-ul{
+ul {
   list-style: none;
 }
-.text-center{
+.text-center {
   text-align: center;
 }
